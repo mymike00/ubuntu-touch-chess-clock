@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=chessclock
+Exec=qmlscene %U chessclock/Main.qml
+Icon=chessclock/chessclock.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true

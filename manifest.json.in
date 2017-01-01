@@ -1,0 +1,15 @@
+{
+    "name": "chessclock.jonas",
+    "description": "Simple chess clock for Ubuntu Touch",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Chess Clock",
+    "hooks": {
+        "chessclock": {
+            "apparmor": "chessclock/chessclock.apparmor",
+            "desktop": "chessclock/chessclock.desktop"
+        }
+    },
+    "version": "1.0",
+    "maintainer": "Jonas Tjemsland <jonas.tjemsland@gmail.com>",
+    "framework": "ubuntu-sdk-15.04"
+}
