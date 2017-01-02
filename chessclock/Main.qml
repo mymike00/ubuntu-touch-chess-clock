@@ -287,7 +287,7 @@ MainView {
                     id: contactText
                     y: parent.height/3
                     x: parent.width/20
-                    text: " <p><b>i18n.tr(Author:)</b> Jonas Tjemsland </p>)
+                    text: " <p><b>i18n.tr(Author:)</b> Jonas Tjemsland </p>
                             <p><b>i18n.tr(Contact:)</b> jonas.tjemsland@gmail.com </p>
                             <p><b>i18n.tr(Website:)</b> <font size=\"8\"><a href=\"https://github.com/tjemsland/ubuntu-touch-chess-clock\">github.com/tjemsland/ubuntu-touch-chess-clock</a></font> </p>
                             <p><b>i18n.tr(Version:)</b> 1.0 </p>
