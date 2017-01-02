@@ -171,7 +171,7 @@ MainView {
                     anchors.topMargin: 20
                     anchors.left: checkboxCountUp.left
                     anchors.leftMargin: 20
-                    text: "Delay"
+                    text: i18n.tr("Delay")
                     visible: fischer
                     anchors.top: checkboxFischer.bottom
                 }
@@ -191,7 +191,7 @@ MainView {
                     id: checkboxCountUp
                     anchors.top: parent.top
                     Label {
-                        text: "Count up"
+                        text: i18n.tr("Count up")
                         anchors.left: parent.right
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.rightMargin: 10
@@ -213,7 +213,7 @@ MainView {
                     id: checkboxFischer
                     anchors.top: checkboxCountUp.bottom
                     Label {
-                        text: "Fischer"
+                        text: i18n.tr("Fischer")
                         anchors.left: parent.right
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.rightMargin: 10
@@ -236,7 +236,7 @@ MainView {
                     anchors.topMargin: 20
                     anchors.left: parent.left
                     anchors.leftMargin: 20
-                    text: "Player 1"
+                    text: i18n.tr("Player 1")
                 }
                 DatePicker {
                     width: parent.width/8
@@ -253,7 +253,7 @@ MainView {
                     anchors.topMargin: 20
                     anchors.left: datePicker1.right
                     anchors.leftMargin: 20
-                    text: "Player 2"
+                    text: i18n.tr("Player 2")
                 }
                 DatePicker {
                     width: parent.width/8
@@ -287,11 +287,11 @@ MainView {
                     id: contactText
                     y: parent.height/3
                     x: parent.width/20
-                    text: " <p><b>Author:</b> Jonas Tjemsland </p>
-                            <p><b>Contact:</b> jonas.tjemsland@gmail.com </p>
-                            <p><b>Website:</b> <font size=\"8\"><a href=\"https://github.com/tjemsland/ubuntu-touch-chess-clock\">github.com/tjemsland/ubuntu-touch-chess-clock</a></font> </p>
-                            <p><b>Version:</b> 1.0 </p>
-                            <p><b>Date:</b> January 1, 2017 </p>"
+                    text: " <p><b>i18n.tr(Author:)</b> Jonas Tjemsland </p>)
+                            <p><b>i18n.tr(Contact:)</b> jonas.tjemsland@gmail.com </p>
+                            <p><b>i18n.tr(Website:)</b> <font size=\"8\"><a href=\"https://github.com/tjemsland/ubuntu-touch-chess-clock\">github.com/tjemsland/ubuntu-touch-chess-clock</a></font> </p>
+                            <p><b>i18n.tr(Version:)</b> 1.0 </p>
+                            <p><b>i18n.tr(Date:)</b> January 1, 2017 </p>"
                 }
             }
         }
