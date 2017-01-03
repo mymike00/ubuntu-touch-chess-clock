@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-01 19:42+0000\n"
+"POT-Creation-Date: 2017-01-03 13:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/jonas/apps/chessclock/chessclock/Main.qml:96
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:96
 msgid "Chess clock"
 msgstr ""
 
-#: /home/jonas/apps/chessclock/chessclock/Main.qml:167
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:167
 msgid "Select time and mode"
 msgstr ""
 
-#: /home/jonas/apps/chessclock/chessclock/Main.qml:271
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:174
+msgid "Delay"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:194
+msgid "Count up"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:216
+msgid "Fischer"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:239
+msgid "Player 1"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:256
+msgid "Player 2"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/Main.qml:271
 msgid "About"
 msgstr ""
 
-#: /home/jonas/apps/build-chessclock-UbuntuSDK_for_phone_GCC_armhf_ubuntu_sdk_15_04-Release/chessclock/chessclock.desktop.h:1
+#: /home/jonas/apps/build-chessclock-UbuntuSDK_for_phone_GCC_armhf_ubuntu_sdk_15_04-Debug/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr ""
