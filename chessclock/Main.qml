@@ -17,14 +17,14 @@ MainView {
     property real margins: units.gu(2)
     property real buttonWidth: units.gu(9)
 
-    property int first_player_minutes: 0
-    property int first_player_seconds: 2
-    property int second_player_minutes: 0
-    property int second_player_seconds: 2
-    property int initial_first_player_minutes: 0
-    property int initial_first_player_seconds: 2
-    property int initial_second_player_minutes: 0
-    property int initial_second_player_seconds: 2
+    property int first_player_minutes: 5
+    property int first_player_seconds: 0
+    property int second_player_minutes: 5
+    property int second_player_seconds: 0
+    property int initial_first_player_minutes: 5
+    property int initial_first_player_seconds: 0
+    property int initial_second_player_minutes: 5
+    property int initial_second_player_seconds: 0
     property int delay_seconds: 5
     property int delay_minutes: 0
     property bool is_first_player_timed: false
@@ -92,7 +92,8 @@ MainView {
         return ( !finished &&
                     ( (first_player_seconds == 0 && first_player_minutes == 0)   ||
                         (second_player_seconds == 0 && second_player_minutes == 0) ) &&
-                is_first_player_timed != is_second_player_timed
+                is_first_player_timed != is_second_player_timed &&
+                !countUp
                 )
 
     }
