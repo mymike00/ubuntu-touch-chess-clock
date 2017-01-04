@@ -10,6 +10,18 @@ Tab {
     title: i18n.tr("Select time and mode")
 
     page: Page {
+        // Head with info action
+        head {
+            actions: [
+                Action {
+                    objectName: "infoButton"
+                    text: i18n.tr("Information")
+                    iconName: "info"
+                    onTriggered: { }
+                }
+            ]
+        }
+
         // Mode picker and label
         Label {
             id: modePickerLabel
