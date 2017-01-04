@@ -6,91 +6,41 @@ import Ubuntu.Layouts 0.1
 
 Tab {
     property bool new_settings: false
-    // For some reason, the onDateChanged is toggled on creation.
-    // The following property is used to "fix" this. It is quite
-    // ugly, but it works.
-    property bool startup: true
 
     title: i18n.tr("Select time and mode")
 
     page: Page {
-
-        // Checkbox and label for Fischer mode
-        Switch {
-            id: checkboxFischer
-            anchors.top: checkboxCountUp.bottom
-            Label {
-                text: i18n.tr("Fischer")
-                anchors.left: parent.right
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.leftMargin: 10
-            }
-            anchors.topMargin: parent.height/10
-            anchors.left: datePicker2.right
-            anchors.leftMargin: parent.width/30
-            checked: mainView.fischer
-            onCheckedChanged: {
-                                new_settings = true;
-                                if (checkboxCountUp.checked) {
-                                    if (checkboxFischer.checked) {
-                                        checkboxCountUp.checked = false;
-                                    }
-                                }
-                              }
-        }
-
-        // Date picker and label for delay time
+        // Mode picker and label
         Label {
-            id: label_date_delay
+            id: modePickerLabel
             anchors.topMargin: 20
-            anchors.left: checkboxCountUp.left
-            anchors.leftMargin: 20
-            text: i18n.tr("Delay")
-            visible: checkboxFischer.checked
-            anchors.top: checkboxFischer.bottom
-        }
-        DatePicker {
-            id: datePickerdelay
-            width: parent.width/8
-            anchors.top: label_date_delay.bottom
-            anchors.leftMargin: 20
-            anchors.topMargin: 20
-            anchors.left: checkboxCountUp.left
-            date: new Date(0,0,0,0,mainView.delay_minutes,mainView.delay_seconds,0)
-            mode: "Minutes|Seconds"
-            height: parent.height/4
-            visible: checkboxFischer.checked // visible only for certain modes
-            onDateChanged: {if (!startup) {
-                    new_settings = true;
-                }}
-            // For some reason, the onDateChanged is toggled on creation.
-            // The following property is used to "fix" its implications.
-            // It is quite ugly, but it works.
-            onActiveFocusChanged: startup = false;
-        }
-
-        // Checkbox for count up mode
-        Switch {
-            id: checkboxCountUp
             anchors.top: parent.top
-            Label {
-                text: i18n.tr("Count up")
-                anchors.left: parent.right
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.leftMargin: 10
+            anchors.left: modePicker.left
+            text: i18n.tr("Select mode")
+        }
+        Picker {
+            id: modePicker
+            width: modePickerLabel.width
+            height: {
+                if (parent.height < parent.width) { return parent.height/2 }
+                else { return parent.height/4 }
             }
-            anchors.topMargin: parent.height/10
+            model: ["Sudden Death","Count Up","Fischer","Hour Glass"]
             anchors.left: datePicker2.right
-            anchors.leftMargin: parent.width/30
-            checked: mainView.countUp
-            onCheckedChanged: {
-                                new_settings = true;
-                                if (checkboxFischer.checked) {
-                                    if (checkboxCountUp.checked) {
-                                        checkboxFischer.checked = false;
-                                    }
-                                }
-                               }
+            anchors.leftMargin: 20
+            anchors.top: datePicker2.top
+            delegate: PickerDelegate {
+                Label {
+                    anchors.left: parent.left
+                    anchors.centerIn: parent
+                    text: modelData
+                    textSize: Label.XSmall
+                }
+            }
+            selectedIndex: 1
+            onSelectedIndexChanged: {
+                new_settings = true
+            }
         }
 
         // Date picker and label for player 1
@@ -104,20 +54,19 @@ Tab {
         }
         DatePicker {
             width: parent.width/8
+            height: {
+                if (parent.height < parent.width) { return parent.height/2 }
+                else { return parent.height/4 }
+            }
             anchors.top: label_date_player1.bottom
             anchors.leftMargin: 20
             anchors.topMargin: 20
             anchors.left: parent.left
-            //date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
             id: datePicker1
             mode: "Minutes|Seconds"
             onDateChanged: {if (!startup) {
                                new_settings = true;
                            }}
-            // For some reason, the onDateChanged is toggled on creation.
-            // The following property is used to "fix" its implications.
-            // It is quite ugly, but it works.
-            onActiveFocusChanged: startup = false;
         }
 
         // Date picker and label for player 2
@@ -131,21 +80,20 @@ Tab {
         }
         DatePicker {
             width: parent.width/8
+            height: {
+                if (parent.height < parent.width) { return parent.height/2 }
+                else { return parent.height/4 }
+            }
             anchors.top: label_date_player2.bottom
             anchors.leftMargin: 20
             anchors.topMargin: 20
             anchors.left: datePicker1.right
-            //date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
             id: datePicker2
             mode: "Minutes|Seconds"
             onDateChanged: {    if (!startup) {
                                     new_settings = true;
                                 }
             }
-            // For some reason, the onDateChanged is toggled on creation.
-            // The following property is used to "fix" its implications.
-            // It is quite ugly, but it works.
-            onActiveFocusChanged: startup = false;
         }
 
         // Enable new settings button
@@ -167,9 +115,41 @@ Tab {
                         mainView.is_first_player_timed = false;
                         mainView.is_second_player_timed = false;
                         mainView.paused = false;
-                        mainView.fischer = checkboxFischer.checked;
-                        mainView.countUp = checkboxCountUp.checked;
-                        mainView.reset()}
+                        mainView.reset()
+                        mainView.mode = modePicker.selectedIndex
+                        mainView.delay_seconds = datePickerdelay.seconds
+                        mainView.delay_minutes = datePickerdelay.minutes
+            }
+        }
+
+        // Date picker for delay time
+
+        Label {
+            id: label_date_delay
+            anchors.topMargin: 20
+            anchors.left: modePickerLabel.right
+            anchors.leftMargin: 20
+            text: i18n.tr("Delay")
+            visible: modePicker.selectedIndex === 2
+            anchors.top: parent.top
+        }
+
+        DatePicker {
+            id: datePickerdelay
+            width: parent.width/8
+            anchors.top: label_date_delay.bottom
+            anchors.topMargin: 20
+            anchors.left: label_date_delay.left
+            date: new Date(0,0,0,0,mainView.delay_minutes,mainView.delay_seconds,0)
+            mode: "Minutes|Seconds"
+            height: {
+                if (parent.height < parent.width) { return parent.height/2 }
+                else { return parent.height/4 }
+            }
+            visible: modePicker.selectedIndex === 2
+            onDateChanged: {if (!startup) {
+                    new_settings = true;
+                }}
         }
 
     }

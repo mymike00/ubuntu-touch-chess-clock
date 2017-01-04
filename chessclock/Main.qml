@@ -11,6 +11,7 @@ import Ubuntu.Components.ListItems 1.3
 MainView {
     id : mainView
     applicationName: "chessclock.jonas"
+    automaticOrientation: false
     width: units.gu(100)
     height: units.gu(75)
 
@@ -33,8 +34,7 @@ MainView {
     property bool is_second_player_timed: false
     property bool paused: false
     property bool finished: false
-    property bool countUp: false
-    property bool fischer: false
+    property int mode: 0 // 0: sudden death, 1: count up, 2: fischer, 3: hour glass
     property bool muted: false
 
     function timeChanged() {
@@ -113,11 +113,11 @@ MainView {
     }
 
     function showTenthFirstPlayer () {
-        return (first_player_minutes<=0 && first_player_seconds <= 20 && !countUp)
+        return (first_player_minutes<=0 && first_player_seconds <= 20 && mode !== 1)
     }
 
     function showTenthSecondPlayer () {
-        return (second_player_minutes<=0 && second_player_seconds <= 20 && !countUp)
+        return (second_player_minutes<=0 && second_player_seconds <= 20 && mode !== 1)
     }
 
     function isGameOver() {
@@ -125,7 +125,7 @@ MainView {
                     ( (first_player_seconds == 0 && first_player_minutes == 0 && first_player_tenth == 0)   ||
                         (second_player_seconds == 0 && second_player_minutes == 0 && second_player_tenth == 0) ) &&
                 is_first_player_timed != is_second_player_timed &&
-                !countUp
+                mode !== 1
                 )
 
     }

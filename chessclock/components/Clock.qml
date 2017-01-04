@@ -23,12 +23,26 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
 
         Timer {
             interval: 100; running: true; repeat: true;
-            onTriggered: {if (!paused && !countUp) { mainView.timeChanged() }
-                         else if (!paused && countUp) { mainView.timeChangedCountUp() }
-                         if ( mainView.isGameOver() ) {
-                             if (!muted) { alarm.play() }
-                            }
-                         }
+            onTriggered: {
+                if (!paused) {
+                    switch (mainView.mode) {
+                    case 0: // sudden death
+                        mainView.timeChanged()
+                        break
+                    case 1: // count up
+                        timeChangedCountUp()
+                        break
+                    case 2: // fischer
+                        mainView.timeChanged()
+                        break
+                    case 3: // hour glass
+                        break
+                    }
+                }
+                if ( mainView.isGameOver() ) {
+                    if (!muted) { alarm.play() }
+                }
+            }
         }
 
         page: Page {
@@ -76,7 +90,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                         anchors.centerIn: parent
                         font.pixelSize: 100
                     }
-                    onClicked: {if (fischer && !paused && is_second_player_timed && !finished) {
+                    onClicked: {if (mainView.mode === 2 && !paused && is_second_player_timed && !finished) {
                                     second_player_seconds += delay_seconds;
                                     second_player_minutes += delay_minutes;
                                     if ( second_player_seconds >= 60 ) {
@@ -114,7 +128,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                         anchors.centerIn: parent
                         font.pixelSize: 120
                     }
-                    onClicked: {if (fischer && !paused && is_first_player_timed && !finished) {
+                    onClicked: {if (mainView.mode === 2 && !paused && is_first_player_timed && !finished) {
                                      first_player_seconds += delay_seconds
                                      first_player_minutes += delay_minutes
                                      if ( first_player_seconds >= 60 ) {
