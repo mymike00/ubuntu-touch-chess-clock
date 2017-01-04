@@ -23,7 +23,7 @@ Tab {
                 text: i18n.tr("Fischer")
                 anchors.left: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.rightMargin: 10
+                anchors.leftMargin: 10
             }
             anchors.topMargin: parent.height/10
             anchors.left: datePicker2.right
@@ -77,7 +77,7 @@ Tab {
                 text: i18n.tr("Count up")
                 anchors.left: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.rightMargin: 10
+                anchors.leftMargin: 10
             }
             anchors.topMargin: parent.height/10
             anchors.left: datePicker2.right
@@ -97,6 +97,7 @@ Tab {
         Label {
             id: label_date_player1
             anchors.topMargin: 20
+            anchors.top: parent.top
             anchors.left: parent.left
             anchors.leftMargin: 20
             text: i18n.tr("Player 1")
@@ -122,6 +123,7 @@ Tab {
         // Date picker and label for player 2
         Label {
             id: label_date_player2
+            anchors.top: parent.top
             anchors.topMargin: 20
             anchors.left: datePicker1.right
             anchors.leftMargin: 20
@@ -151,6 +153,9 @@ Tab {
             visible: true
             id: newSettingsButton
             anchors.top: datePicker1.bottom
+            anchors.leftMargin: 20
+            anchors.topMargin: 20
+            anchors.left: parent.left
             text: i18n.tr("Set clock")
             color: (new_settings) ? "green" : "gray"
             onClicked: {new_settings = false;
