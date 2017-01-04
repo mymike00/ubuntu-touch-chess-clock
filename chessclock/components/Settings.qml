@@ -68,8 +68,7 @@ Tab {
              Dialog {
                  id: dialogSuddenDeath
                  title: i18n.tr("Sudden Death")
-                 text: i18n.tr("This is the simplest methodology. Each player is assigned a fixed amount of time for the"+
-                       "whole game: once a player's main time expires, he loses the game.")
+                 text: i18n.tr("This is the simplest methodology. Each player is assigned a fixed amount of time for the whole game: once a player's main time expires, he loses the game.")
                  Button {
                      text: i18n.tr("That was simple!")
                      onClicked: PopupUtils.close(dialogSuddenDeath)
@@ -82,14 +81,7 @@ Tab {
              Dialog {
                  id: dialogHourGlass
                  title: i18n.tr("Hour Glass")
-                 text: i18n.tr("A player loses in this time control when they allow the difference between both clocks"+
-                       "to reach the specified total amount. For example, if the total is defined as one minute,"+
-                       "both players start their clocks at thirty seconds. Every second the first player uses"+
-                       "to think in their moves is subtracted from their clock and added to their opponent's"+
-                       "clock. If they use thirty seconds to move, the difference between the clocks reaches"+
-                       "one minute, and the time flag falls to indicate that they lose by time. If they have"+
-                       "used twenty nine seconds and then push the clock's button, they have one second left on"+
-                       "their clock and their opponent has fifty-nine seconds.")
+                 text: i18n.tr("A player loses in this time control when they allow the difference between both clocks to reach the specified total amount. For example, if the total is defined as one minute, both players start their clocks at thirty seconds. Every second the first player uses to think in their moves is subtracted from their clock and added to their opponent's clock. If they use thirty seconds to move, the difference between the clocks reaches one minute, and the time flag falls to indicate that they lose by time. If they have used twenty nine seconds and then push the clock's button, they have one second left on their clock and their opponent has fifty-nine seconds.")
                  Button {
                      text: i18n.tr("Ok, got it!")
                      onClicked: PopupUtils.close(dialogHourGlass)
@@ -101,13 +93,8 @@ Tab {
              id: infoFischer
              Dialog {
                  id: dialogFischer
-                 title: i18n.tr("Hour Glass")
-                 text: i18n.tr("Before a player has made their move, a specified time increment is added to their clock."+
-                       "Time can be accumulated, so if the player moves within the delay period, their remaining"+
-                       "time actually increases. For example, if the delay time is five seconds, and a player"+
-                       "has four seconds left on their clock, as soon as their opponent moves, they receive the"+
-                       "increment and has nine seconds to make a move. If they take two seconds to move, on the"+
-                       "start of their next move they have twelve seconds.")
+                 title: i18n.tr("Fischer")
+                 text: i18n.tr("Before a player has made their move, a specified time increment is added to their clock. Time can be accumulated, so if the player moves within the delay period, their remaining time actually increases. For example, if the delay time is five seconds, and a player has four seconds left on their clock, as soon as their opponent moves, they receive the increment and has nine seconds to make a move. If they take two seconds to move, on the start of their next move they have twelve seconds.")
                  Button {
                      text: i18n.tr("I understand!")
                      onClicked: PopupUtils.close(dialogFischer)
