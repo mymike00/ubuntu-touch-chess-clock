@@ -71,7 +71,14 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     anchors.right: parent.right
                     height: parent.height
                     width: parent.width/2
-                    color: (is_second_player_timed) ? "darkgray" : "gray"
+                    color: {
+                        if (!finished) {
+                            return (is_second_player_timed) ? "darkgray" : "gray"
+                        } else {
+                            return "#E95420" // from https://design.ubuntu.com/brand/colour-palette
+                        }
+                    }
+
                     Text {
                         property string timerText: ""
                         text: {
@@ -108,7 +115,13 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     anchors.left: parent.left
                     height: parent.height
                     width: parent.width/2
-                    color: (is_first_player_timed) ? "darkgray" : "gray"
+                    color: {
+                        if (!finished) {
+                            return (is_first_player_timed) ? "darkgray" : "gray"
+                        } else {
+                            return "#E95420" // from https://design.ubuntu.com/brand/colour-palette
+                        }
+                    }
                     Text {
                         property string timerText: ""
                         property string timerTextTenth: ""
