@@ -11,6 +11,7 @@ import Ubuntu.Components.ListItems 1.3
 MainView {
     id : mainView
     applicationName: "chessclock.jonas"
+    automaticOrientation: false
     width: units.gu(100)
     height: units.gu(75)
 
@@ -19,8 +20,10 @@ MainView {
 
     property int first_player_minutes: 5
     property int first_player_seconds: 0
+    property int first_player_tenth: 0
     property int second_player_minutes: 5
     property int second_player_seconds: 0
+    property int second_player_tenth: 0
     property int initial_first_player_minutes: 5
     property int initial_first_player_seconds: 0
     property int initial_second_player_minutes: 5
@@ -31,49 +34,99 @@ MainView {
     property bool is_second_player_timed: false
     property bool paused: false
     property bool finished: false
-    property bool countUp: false
-    property bool fischer: false
+    property int mode: 0 // 0: sudden death, 1: count up, 2: fischer, 3: hour glass
     property bool muted: false
+
+    function firstPlayerCountDown() {
+        if (first_player_tenth == 0) {
+                        first_player_tenth = 9;
+                        if (first_player_seconds == 0) {
+                            first_player_seconds = 59;
+                            first_player_minutes -= 1
+                        } else {
+                            first_player_seconds -= 1
+                        }
+                    } else {
+                        first_player_tenth -= 1
+                    }
+    }
+
+    function secondPlayerCountDown() {
+        if (second_player_tenth == 0) {
+                        second_player_tenth = 9;
+                        if (second_player_seconds == 0) {
+                            second_player_seconds = 59;
+                            second_player_minutes -= 1
+                        } else {
+                            second_player_seconds -= 1
+                        }
+                    } else {
+                        second_player_tenth -= 1
+                    }
+    }
 
     function timeChanged() {
         if (is_first_player_timed) {
-            if ((second_player_seconds<=0 && second_player_minutes<=0)
-                    || (first_player_seconds<=0 && first_player_minutes<=0)) {
+            if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                    || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (first_player_seconds == 0) {
-                first_player_seconds = 59;
-                first_player_minutes = first_player_minutes - 1;
-            } else {
-                first_player_seconds = first_player_seconds - 1;
-            }
+            } else { firstPlayerCountDown() }
         } else if (is_second_player_timed) {
-            if ((second_player_seconds<=0 && second_player_minutes<=0)
-                    || (first_player_seconds<=0 && first_player_minutes<=0)) {
+            if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                    || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (second_player_seconds == 0) {
-                second_player_seconds = 59;
-                second_player_minutes = second_player_minutes - 1;
+            } else { secondPlayerCountDown() }
+        }
+    }
+
+    function firstPlayerCountUp() {
+        if (first_player_tenth == 9) {
+            first_player_tenth = 0;
+            if (first_player_seconds == 59) {
+                first_player_seconds = 0
+                first_player_minutes += 1
             } else {
-                second_player_seconds = second_player_seconds - 1;
+                first_player_seconds += 1
             }
+        } else {
+            first_player_tenth += 1
+        }
+    }
+
+    function secondPlayerCountUp() {
+        if (second_player_tenth == 9) {
+            second_player_tenth = 0;
+            if (second_player_seconds == 59) {
+                second_player_seconds = 0
+                second_player_minutes += 1
+            } else {
+                second_player_seconds += 1
+            }
+        } else {
+            second_player_tenth += 1
         }
     }
 
     function timeChangedCountUp() {
         if (is_first_player_timed) {
-            if (first_player_seconds == 59) {
-                first_player_seconds = 0;
-                first_player_minutes = first_player_minutes + 1;
-            } else {
-                first_player_seconds = first_player_seconds + 1;
-            }
+            firstPlayerCountUp()
         } else if (is_second_player_timed) {
-            if (second_player_seconds == 59) {
-                second_player_seconds = 0;
-                second_player_minutes = second_player_minutes + 1;
-            } else {
-                second_player_seconds = second_player_seconds + 1;
-            }
+            secondPlayerCountUp()
+        }
+    }
+
+    function timeChangedHourGlass() {
+        if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
+            finished = true
+        }
+        else if (is_first_player_timed) {
+                    firstPlayerCountDown()
+                    secondPlayerCountUp()
+             }
+        else {
+            firstPlayerCountUp()
+            secondPlayerCountDown()
         }
     }
 
@@ -82,18 +135,30 @@ MainView {
         mainView.first_player_seconds = initial_first_player_seconds;
         mainView.second_player_minutes = initial_second_player_minutes;
         mainView.second_player_seconds = initial_second_player_seconds;
+        mainView.second_player_tenth = 0
+        mainView.first_player_tenth = 0
         mainView.finished = false;
         mainView.is_first_player_timed = false;
         mainView.is_second_player_timed = false;
         mainView.paused = false;
     }
 
+    function showTenthFirstPlayer () {
+        return (first_player_minutes<=0 && first_player_seconds <= 20 && mode !== 1)
+    }
+
+    function showTenthSecondPlayer () {
+        return (second_player_minutes<=0 && second_player_seconds <= 20 && mode !== 1)
+    }
+
     function isGameOver() {
         return ( !finished &&
-                    ( (first_player_seconds == 0 && first_player_minutes == 0)   ||
-                        (second_player_seconds == 0 && second_player_minutes == 0) ) &&
+
+                    ( (first_player_seconds == 0 && first_player_minutes == 0 && first_player_tenth == 0)   ||
+                        (second_player_seconds == 0 && second_player_minutes == 0 && second_player_tenth == 0) ) &&
                 is_first_player_timed != is_second_player_timed &&
-                !countUp
+                mode !== 1
+
                 )
 
     }

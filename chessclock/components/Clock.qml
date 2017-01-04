@@ -22,13 +22,28 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
         }
 
         Timer {
-            interval: 1000; running: true; repeat: true;
-            onTriggered: {if (!paused && !countUp) { mainView.timeChanged() }
-                         else if (!paused && countUp) { mainView.timeChangedCountUp() }
-                         if ( mainView.isGameOver() ) {
-                             if (!muted) { alarm.play() }
-                            }
-                         }
+            interval: 100; running: true; repeat: true;
+            onTriggered: {
+                if (!paused) {
+                    switch (mainView.mode) {
+                    case 0: // sudden death
+                        mainView.timeChanged()
+                        break
+                    case 1: // count up
+                        timeChangedCountUp()
+                        break
+                    case 2: // fischer
+                        mainView.timeChanged()
+                        break
+                    case 3: // hour glass
+                        timeChangedHourGlass()
+                        break
+                    }
+                }
+                if ( mainView.isGameOver() ) {
+                    if (!muted) { alarm.play() }
+                }
+            }
         }
 
         page: Page {
@@ -56,19 +71,34 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     anchors.right: parent.right
                     height: parent.height
                     width: parent.width/2
-                    color: (is_second_player_timed) ? "darkgray" : "gray"
+                    color: {
+                        if (!finished) {
+                            return (is_second_player_timed) ? "darkgray" : "gray"
+                        } else {
+                            return "#E95420" // from https://design.ubuntu.com/brand/colour-palette
+                        }
+                    }
+
                     Text {
-                        text: {if (second_player_seconds<10) {
-                                return second_player_minutes+":0"+second_player_seconds
+                        property string timerText: ""
+                        text: {
+                                if (second_player_seconds<10) {
+                                    if ( mainView.showTenthSecondPlayer() ) {
+                                        return second_player_minutes+":0"+second_player_seconds + "<font size=\"6\">"+second_player_tenth+"</font>"
+                                    }
+                                    return second_player_minutes+":0"+second_player_seconds
                                } else {
-                                return second_player_minutes+":"+second_player_seconds
+                                    if ( mainView.showTenthSecondPlayer() ) {
+                                        return second_player_minutes+":"+second_player_seconds + "<font size=\"6\">"+second_player_tenth+"</font>"
+                                    }
+                               return second_player_minutes+":"+second_player_seconds
                                }
                         }
                         color: "black"
                         anchors.centerIn: parent
                         font.pixelSize: 100
                     }
-                    onClicked: {if (fischer && !paused && is_second_player_timed && !finished) {
+                    onClicked: {if (mainView.mode === 2 && !paused && is_second_player_timed && !finished) {
                                     second_player_seconds += delay_seconds;
                                     second_player_minutes += delay_minutes;
                                     if ( second_player_seconds >= 60 ) {
@@ -76,28 +106,43 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                         second_player_minutes += 1;
                                     }
                                 }
+                                if (is_second_player_timed && !muted){ click.play() }
                                 is_second_player_timed = false
                                 is_first_player_timed = true
-                                if (!muted) { click.play() }
                                }
                 }
             Button {
                     anchors.left: parent.left
                     height: parent.height
                     width: parent.width/2
-                    color: (is_first_player_timed) ? "darkgray" : "gray"
+                    color: {
+                        if (!finished) {
+                            return (is_first_player_timed) ? "darkgray" : "gray"
+                        } else {
+                            return "#E95420" // from https://design.ubuntu.com/brand/colour-palette
+                        }
+                    }
                     Text {
-                        text: {if (first_player_seconds<10) {
-                                return first_player_minutes+":0"+first_player_seconds
+                        property string timerText: ""
+                        property string timerTextTenth: ""
+                        text: {
+                                if (first_player_seconds<10) {
+                                    if ( mainView.showTenthFirstPlayer() ) {
+                                        return first_player_minutes+":0"+first_player_seconds + "<font size=\"6\">"+first_player_tenth+"</font>"
+                                    }
+                                    return first_player_minutes+":0"+first_player_seconds
                                } else {
-                                return first_player_minutes+":"+first_player_seconds
+                                    if ( mainView.showTenthFirstPlayer() ) {
+                                        return first_player_minutes+":"+first_player_seconds + "<font size=\"6\">"+first_player_tenth+"</font>"
+                                    }
+                               return first_player_minutes+":"+first_player_seconds
                                }
                         }
                         color: "black"
                         anchors.centerIn: parent
                         font.pixelSize: 120
                     }
-                    onClicked: {if (fischer && !paused && is_first_player_timed && !finished) {
+                    onClicked: {if (mainView.mode === 2 && !paused && is_first_player_timed && !finished) {
                                      first_player_seconds += delay_seconds
                                      first_player_minutes += delay_minutes
                                      if ( first_player_seconds >= 60 ) {
@@ -105,9 +150,9 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                          first_player_minutes += 1;
                                      }
                                  }
+                                if (is_first_player_timed && !muted){ click.play() }
                                 is_first_player_timed = false
                                 is_second_player_timed = true
-                                click.play()
                                 }
                 }
         }

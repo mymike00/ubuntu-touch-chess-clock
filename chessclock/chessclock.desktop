@@ -5,3 +5,4 @@ Icon=chessclock/chessclock.png
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
+X-Ubuntu-Supported-Orientations=landscape
