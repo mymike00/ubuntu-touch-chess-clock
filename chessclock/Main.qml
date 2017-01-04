@@ -37,65 +37,96 @@ MainView {
     property int mode: 0 // 0: sudden death, 1: count up, 2: fischer, 3: hour glass
     property bool muted: false
 
+    function firstPlayerCountDown() {
+        if (first_player_tenth == 0) {
+                        first_player_tenth = 9;
+                        if (first_player_seconds == 0) {
+                            first_player_seconds = 59;
+                            first_player_minutes -= 1
+                        } else {
+                            first_player_seconds -= 1
+                        }
+                    } else {
+                        first_player_tenth -= 1
+                    }
+    }
+
+    function secondPlayerCountDown() {
+        if (second_player_tenth == 0) {
+                        second_player_tenth = 9;
+                        if (second_player_seconds == 0) {
+                            second_player_seconds = 59;
+                            second_player_minutes -= 1
+                        } else {
+                            second_player_seconds -= 1
+                        }
+                    } else {
+                        second_player_tenth -= 1
+                    }
+    }
+
     function timeChanged() {
         if (is_first_player_timed) {
             if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
                     || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (first_player_tenth == 0) {
-                first_player_tenth = 9;
-                if (first_player_seconds == 0) {
-                    first_player_seconds = 59;
-                    first_player_minutes -= 1
-                } else {
-                    first_player_seconds -= 1
-                }
-            } else {
-                first_player_tenth -= 1
-            }
+            } else { firstPlayerCountDown() }
         } else if (is_second_player_timed) {
             if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
                     || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (second_player_tenth == 0) {
-                second_player_tenth = 9;
-                if (second_player_seconds == 0) {
-                    second_player_seconds = 59;
-                    second_player_minutes -= 1
-                } else {
-                    second_player_seconds -= 1
-                }
+            } else { secondPlayerCountDown() }
+        }
+    }
+
+    function firstPlayerCountUp() {
+        if (first_player_tenth == 9) {
+            first_player_tenth = 0;
+            if (first_player_seconds == 59) {
+                first_player_seconds = 0
+                first_player_minutes += 1
             } else {
-                second_player_tenth -= 1
+                first_player_seconds += 1
             }
+        } else {
+            first_player_tenth += 1
+        }
+    }
+
+    function secondPlayerCountUp() {
+        if (second_player_tenth == 9) {
+            second_player_tenth = 0;
+            if (second_player_seconds == 59) {
+                second_player_seconds = 0
+                second_player_minutes += 1
+            } else {
+                second_player_seconds += 1
+            }
+        } else {
+            second_player_tenth += 1
         }
     }
 
     function timeChangedCountUp() {
         if (is_first_player_timed) {
-            if (first_player_tenth == 9) {
-                first_player_tenth = 0;
-                if (first_player_seconds == 59) {
-                    first_player_seconds = 0
-                    first_player_minutes += 1
-                } else {
-                    first_player_seconds += 1
-                }
-            } else {
-                first_player_tenth += 1
-            }
+            firstPlayerCountUp()
         } else if (is_second_player_timed) {
-            if (second_player_tenth == 9) {
-                second_player_tenth = 0;
-                if (second_player_seconds == 59) {
-                    second_player_seconds = 0
-                    second_player_minutes += 1
-                } else {
-                    second_player_seconds += 1
-                }
-            } else {
-                second_player_tenth += 1
-            }
+            secondPlayerCountUp()
+        }
+    }
+
+    function timeChangedHourGlass() {
+        if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
+            finished = true
+        }
+        else if (is_first_player_timed) {
+                    firstPlayerCountDown()
+                    secondPlayerCountUp()
+             }
+        else {
+            firstPlayerCountUp()
+            secondPlayerCountDown()
         }
     }
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-04 13:54+0000\n"
+"POT-Creation-Date: 2017-01-04 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,15 +29,15 @@ msgstr ""
 msgid "Chess clock"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:53
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:54
 msgid "Pause"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:58
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:59
 msgid "Sounds"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:63
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:64
 msgid "Reset"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgid "Select time and mode"
 msgstr ""
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:19
-msgid "Select mode"
+msgid "Mode"
 msgstr ""
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:53

@@ -36,6 +36,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                         mainView.timeChanged()
                         break
                     case 3: // hour glass
+                        timeChangedHourGlass()
                         break
                     }
                 }

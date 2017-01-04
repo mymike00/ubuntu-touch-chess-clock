@@ -16,16 +16,16 @@ Tab {
             anchors.topMargin: 20
             anchors.top: parent.top
             anchors.left: modePicker.left
-            text: i18n.tr("Select mode")
+            text: i18n.tr("Mode")
         }
         Picker {
             id: modePicker
-            width: modePickerLabel.width
+            width: parent.width/8
             height: {
                 if (parent.height < parent.width) { return parent.height/2 }
                 else { return parent.height/4 }
             }
-            model: ["Sudden Death","Count Up","Fischer","Hour Glass"]
+            model: ["Sudden Death","Count Up","Fischer","Hour Glass"] // i18n.tr() is not used on purpose
             anchors.left: datePicker2.right
             anchors.leftMargin: 20
             anchors.top: datePicker2.top
@@ -64,9 +64,9 @@ Tab {
             anchors.left: parent.left
             id: datePicker1
             mode: "Minutes|Seconds"
-            onDateChanged: {if (!startup) {
+            onDateChanged: {
                                new_settings = true;
-                           }}
+                           }
         }
 
         // Date picker and label for player 2
@@ -90,9 +90,9 @@ Tab {
             anchors.left: datePicker1.right
             id: datePicker2
             mode: "Minutes|Seconds"
-            onDateChanged: {    if (!startup) {
+            onDateChanged: {
                                     new_settings = true;
-                                }
+
             }
         }
 
@@ -127,7 +127,7 @@ Tab {
         Label {
             id: label_date_delay
             anchors.topMargin: 20
-            anchors.left: modePickerLabel.right
+            anchors.left: modePicker.right
             anchors.leftMargin: 20
             text: i18n.tr("Delay")
             visible: modePicker.selectedIndex === 2
@@ -147,9 +147,9 @@ Tab {
                 else { return parent.height/4 }
             }
             visible: modePicker.selectedIndex === 2
-            onDateChanged: {if (!startup) {
+            onDateChanged: {
                     new_settings = true;
-                }}
+                }
         }
 
     }
