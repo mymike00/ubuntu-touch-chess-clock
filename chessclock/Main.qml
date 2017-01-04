@@ -153,10 +153,12 @@ MainView {
 
     function isGameOver() {
         return ( !finished &&
+
                     ( (first_player_seconds == 0 && first_player_minutes == 0 && first_player_tenth == 0)   ||
                         (second_player_seconds == 0 && second_player_minutes == 0 && second_player_tenth == 0) ) &&
                 is_first_player_timed != is_second_player_timed &&
                 mode !== 1
+
                 )
 
     }

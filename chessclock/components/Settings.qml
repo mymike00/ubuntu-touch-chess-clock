@@ -12,6 +12,7 @@ Tab {
     title: i18n.tr("Select time and mode")
 
     page: Page {
+
         // Info popover
             Component {
                 id: popoverComponent
@@ -39,6 +40,7 @@ Tab {
                         }
                     }
                 }
+
             }
         Item {
             id: popupLocation
@@ -131,6 +133,7 @@ Tab {
             id: modePickerLabel
             anchors.topMargin: 20
             anchors.top: parent.top
+
             anchors.left: modePicker.left
             text: i18n.tr("Mode")
         }
@@ -140,6 +143,7 @@ Tab {
             height: {
                 if (parent.height < parent.width) { return parent.height/2 }
                 else { return parent.height/4 }
+
             }
             model: ["Sudden Death","Count Up","Fischer","Hour Glass"] // i18n.tr() is not used on purpose
             anchors.left: datePicker2.right
