@@ -22,7 +22,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
         }
 
         Timer {
-            interval: 1000; running: true; repeat: true;
+            interval: 100; running: true; repeat: true;
             onTriggered: {if (!paused && !countUp) { mainView.timeChanged() }
                          else if (!paused && countUp) { mainView.timeChangedCountUp() }
                          if ( mainView.isGameOver() ) {
@@ -58,10 +58,18 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     width: parent.width/2
                     color: (is_second_player_timed) ? "darkgray" : "gray"
                     Text {
-                        text: {if (second_player_seconds<10) {
-                                return second_player_minutes+":0"+second_player_seconds
+                        property string timerText: ""
+                        text: {
+                                if (second_player_seconds<10) {
+                                    if ( mainView.showTenthSecondPlayer() ) {
+                                        return second_player_minutes+":0"+second_player_seconds + "<font size=\"6\">"+second_player_tenth+"</font>"
+                                    }
+                                    return second_player_minutes+":0"+second_player_seconds
                                } else {
-                                return second_player_minutes+":"+second_player_seconds
+                                    if ( mainView.showTenthSecondPlayer() ) {
+                                        return second_player_minutes+":"+second_player_seconds + "<font size=\"6\">"+second_player_tenth+"</font>"
+                                    }
+                               return second_player_minutes+":"+second_player_seconds
                                }
                         }
                         color: "black"
@@ -76,9 +84,9 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                         second_player_minutes += 1;
                                     }
                                 }
+                                if (is_second_player_timed && !muted){ click.play() }
                                 is_second_player_timed = false
                                 is_first_player_timed = true
-                                if (!muted) { click.play() }
                                }
                 }
             Button {
@@ -87,10 +95,19 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     width: parent.width/2
                     color: (is_first_player_timed) ? "darkgray" : "gray"
                     Text {
-                        text: {if (first_player_seconds<10) {
-                                return first_player_minutes+":0"+first_player_seconds
+                        property string timerText: ""
+                        property string timerTextTenth: ""
+                        text: {
+                                if (first_player_seconds<10) {
+                                    if ( mainView.showTenthFirstPlayer() ) {
+                                        return first_player_minutes+":0"+first_player_seconds + "<font size=\"6\">"+first_player_tenth+"</font>"
+                                    }
+                                    return first_player_minutes+":0"+first_player_seconds
                                } else {
-                                return first_player_minutes+":"+first_player_seconds
+                                    if ( mainView.showTenthFirstPlayer() ) {
+                                        return first_player_minutes+":"+first_player_seconds + "<font size=\"6\">"+first_player_tenth+"</font>"
+                                    }
+                               return first_player_minutes+":"+first_player_seconds
                                }
                         }
                         color: "black"
@@ -105,9 +122,9 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                          first_player_minutes += 1;
                                      }
                                  }
+                                if (is_first_player_timed && !muted){ click.play() }
                                 is_first_player_timed = false
                                 is_second_player_timed = true
-                                click.play()
                                 }
                 }
         }

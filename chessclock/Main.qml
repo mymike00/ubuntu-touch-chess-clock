@@ -19,8 +19,10 @@ MainView {
 
     property int first_player_minutes: 5
     property int first_player_seconds: 0
+    property int first_player_tenth: 0
     property int second_player_minutes: 5
     property int second_player_seconds: 0
+    property int second_player_tenth: 0
     property int initial_first_player_minutes: 5
     property int initial_first_player_seconds: 0
     property int initial_second_player_minutes: 5
@@ -37,42 +39,62 @@ MainView {
 
     function timeChanged() {
         if (is_first_player_timed) {
-            if ((second_player_seconds<=0 && second_player_minutes<=0)
-                    || (first_player_seconds<=0 && first_player_minutes<=0)) {
+            if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                    || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (first_player_seconds == 0) {
-                first_player_seconds = 59;
-                first_player_minutes = first_player_minutes - 1;
+            } else if (first_player_tenth == 0) {
+                first_player_tenth = 9;
+                if (first_player_seconds == 0) {
+                    first_player_seconds = 59;
+                    first_player_minutes -= 1
+                } else {
+                    first_player_seconds -= 1
+                }
             } else {
-                first_player_seconds = first_player_seconds - 1;
+                first_player_tenth -= 1
             }
         } else if (is_second_player_timed) {
-            if ((second_player_seconds<=0 && second_player_minutes<=0)
-                    || (first_player_seconds<=0 && first_player_minutes<=0)) {
+            if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                    || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
                 finished = true
-            } else if (second_player_seconds == 0) {
-                second_player_seconds = 59;
-                second_player_minutes = second_player_minutes - 1;
+            } else if (second_player_tenth == 0) {
+                second_player_tenth = 9;
+                if (second_player_seconds == 0) {
+                    second_player_seconds = 59;
+                    second_player_minutes -= 1
+                } else {
+                    second_player_seconds -= 1
+                }
             } else {
-                second_player_seconds = second_player_seconds - 1;
+                second_player_tenth -= 1
             }
         }
     }
 
     function timeChangedCountUp() {
         if (is_first_player_timed) {
-            if (first_player_seconds == 59) {
-                first_player_seconds = 0;
-                first_player_minutes = first_player_minutes + 1;
+            if (first_player_tenth == 9) {
+                first_player_tenth = 0;
+                if (first_player_seconds == 59) {
+                    first_player_seconds = 0
+                    first_player_minutes += 1
+                } else {
+                    first_player_seconds += 1
+                }
             } else {
-                first_player_seconds = first_player_seconds + 1;
+                first_player_tenth += 1
             }
         } else if (is_second_player_timed) {
-            if (second_player_seconds == 59) {
-                second_player_seconds = 0;
-                second_player_minutes = second_player_minutes + 1;
+            if (second_player_tenth == 9) {
+                second_player_tenth = 0;
+                if (second_player_seconds == 59) {
+                    second_player_seconds = 0
+                    second_player_minutes += 1
+                } else {
+                    second_player_seconds += 1
+                }
             } else {
-                second_player_seconds = second_player_seconds + 1;
+                second_player_tenth += 1
             }
         }
     }
@@ -82,16 +104,26 @@ MainView {
         mainView.first_player_seconds = initial_first_player_seconds;
         mainView.second_player_minutes = initial_second_player_minutes;
         mainView.second_player_seconds = initial_second_player_seconds;
+        mainView.second_player_tenth = 0
+        mainView.first_player_tenth = 0
         mainView.finished = false;
         mainView.is_first_player_timed = false;
         mainView.is_second_player_timed = false;
         mainView.paused = false;
     }
 
+    function showTenthFirstPlayer () {
+        return (first_player_minutes<=0 && first_player_seconds <= 20 && !countUp)
+    }
+
+    function showTenthSecondPlayer () {
+        return (second_player_minutes<=0 && second_player_seconds <= 20 && !countUp)
+    }
+
     function isGameOver() {
         return ( !finished &&
-                    ( (first_player_seconds == 0 && first_player_minutes == 0)   ||
-                        (second_player_seconds == 0 && second_player_minutes == 0) ) &&
+                    ( (first_player_seconds == 0 && first_player_minutes == 0 && first_player_tenth == 0)   ||
+                        (second_player_seconds == 0 && second_player_minutes == 0 && second_player_tenth == 0) ) &&
                 is_first_player_timed != is_second_player_timed &&
                 !countUp
                 )
