@@ -7,7 +7,11 @@ QML_FILES += $$files(*.qml,true) \
              $$files(*.js,true)
 
 CONF_FILES +=  chessclock.apparmor \
-               chessclock.png
+               resources/chessclock.svg \
+               resources/chessclock.png \
+               resources/reset.png \
+               resources/alarm1.wav \
+               resources/click.wav
 
 AP_TEST_FILES += tests/autopilot/run \
                  $$files(tests/*.py,true)               

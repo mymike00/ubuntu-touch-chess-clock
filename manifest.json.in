@@ -11,5 +11,5 @@
     },
     "version": "1.0",
     "maintainer": "Jonas Tjemsland <jonas.tjemsland@gmail.com>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "ubuntu-sdk-15.04.6"
 }

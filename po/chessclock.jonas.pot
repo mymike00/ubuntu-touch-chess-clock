@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 16:06+0000\n"
+"POT-Creation-Date: 2017-01-03 23:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,38 +21,54 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:27
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:32
 msgid "Author:"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:7
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:12
 msgid "Chess clock"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:22
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:39
+msgid "Pause"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:44
+msgid "Sounds"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:49
+msgid "Reset"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:14
 msgid "Select time and mode"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:31
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:23
 msgid "Fischer"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:55
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:48
 msgid "Delay"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:86
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:77
 msgid "Count up"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:112
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:102
 msgid "Player 1"
 msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:138
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:128
 msgid "Player 2"
 msgstr ""
 
-#: /home/jonas/apps/build-chessclock-UbuntuSDK_for_phone_GCC_armhf_ubuntu_sdk_15_04-Debug/chessclock/chessclock.desktop.h:1
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:154
+msgid "Set clock"
+msgstr ""
+
+#: /home/jonas/apps/build-chessclock-UbuntuSDK_for_phone_GCC_armhf_ubuntu_sdk_15_04-Release/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr ""

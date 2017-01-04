@@ -1,8 +1,12 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import Ubuntu.Components.Pickers 1.0
 import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
+import Ubuntu.Components.ListItems 1.3
+// Used for compiling on desktop
+//import "components"
+//import "resources"
 
 MainView {
     id : mainView
@@ -13,18 +17,23 @@ MainView {
     property real margins: units.gu(2)
     property real buttonWidth: units.gu(9)
 
-    property int first_player_minutes: 10
-    property int first_player_seconds: 0
-    property int delay_seconds: 10
+    property int first_player_minutes: 0
+    property int first_player_seconds: 2
+    property int second_player_minutes: 0
+    property int second_player_seconds: 2
+    property int initial_first_player_minutes: 0
+    property int initial_first_player_seconds: 2
+    property int initial_second_player_minutes: 0
+    property int initial_second_player_seconds: 2
+    property int delay_seconds: 5
     property int delay_minutes: 0
-    property int second_player_minutes: 10
-    property int second_player_seconds: 0
     property bool is_first_player_timed: false
     property bool is_second_player_timed: false
     property bool paused: false
     property bool finished: false
     property bool countUp: false
     property bool fischer: false
+    property bool muted: false
 
     function timeChanged() {
         if (is_first_player_timed) {
@@ -68,15 +77,37 @@ MainView {
         }
     }
 
+    function reset () {
+        mainView.first_player_minutes = initial_first_player_minutes;
+        mainView.first_player_seconds = initial_first_player_seconds;
+        mainView.second_player_minutes = initial_second_player_minutes;
+        mainView.second_player_seconds = initial_second_player_seconds;
+        mainView.finished = false;
+        mainView.is_first_player_timed = false;
+        mainView.is_second_player_timed = false;
+        mainView.paused = false;
+    }
+
+    function isGameOver() {
+        return ( !finished &&
+                    ( (first_player_seconds == 0 && first_player_minutes == 0)   ||
+                        (second_player_seconds == 0 && second_player_minutes == 0) ) &&
+                is_first_player_timed != is_second_player_timed
+                )
+
+    }
+
     Tabs {
+        id: tabs
+
         Clock {
-            id: clockPage
+            id: clockTab
         }
         Settings {
-            id: settingsPage
+            id: settingsTab
         }
         About {
-            id: aboutPage
+            id: aboutTab
         }
     }
 }

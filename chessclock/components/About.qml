@@ -1,23 +1,28 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import Ubuntu.Components.Pickers 1.0
 import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
 
 Tab {
     title: i18n.tr("About")
+
     page: Page {
-        UbuntuShape {
-            Layouts.item: "icon"
-            property real maxWidth: units.gu(45)
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.height/3
-            height: parent.height/3
-            image: Image {
-                objectName: "aboutImage"
-                source: "chessclock.png"
-                smooth: true
-                fillMode: Image.PreserveAspectFit
+
+        Layouts {
+            anchors.fill: parent
+            UbuntuShape {
+                Layouts.item: "icon"
+                property real maxWidth: units.gu(45)
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.height/3
+                height: parent.height/3
+                source: Image {
+                    objectName: "aboutImage"
+                    source: "chessclock.png"
+                    smooth: true
+                    fillMode: Image.PreserveAspectFit
+                }
             }
         }
         Label {

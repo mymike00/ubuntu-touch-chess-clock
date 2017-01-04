@@ -1,18 +1,10 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Pickers 1.0
+import Ubuntu.Components 1.3
+import Ubuntu.Components.Pickers 1.3
 import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
 
 Tab {
-    property int first_player_minutes: 10
-    property int first_player_seconds: 0
-    property int delay_seconds: 10
-    property int delay_minutes: 0
-    property int second_player_minutes: 10
-    property int second_player_seconds: 0
-    property bool countUp: false
-    property bool fischer: false
     property bool new_settings: false
     // For some reason, the onDateChanged is toggled on creation.
     // The following property is used to "fix" this. It is quite
@@ -24,7 +16,7 @@ Tab {
     page: Page {
 
         // Checkbox and label for Fischer mode
-        CheckBox {
+        Switch {
             id: checkboxFischer
             anchors.top: checkboxCountUp.bottom
             Label {
@@ -36,28 +28,27 @@ Tab {
             anchors.topMargin: parent.height/10
             anchors.left: datePicker2.right
             anchors.leftMargin: parent.width/30
-            checked: fischer
-            onCheckedChanged: { fischer = checkboxFischer.checked;
+            checked: mainView.fischer
+            onCheckedChanged: {
                                 new_settings = true;
-                                if (countUp) {
-                                    if (fischer) {
+                                if (checkboxCountUp.checked) {
+                                    if (checkboxFischer.checked) {
                                         checkboxCountUp.checked = false;
-                                        countUp = false;
                                     }
                                 }
                               }
         }
+
+        // Date picker and label for delay time
         Label {
             id: label_date_delay
             anchors.topMargin: 20
             anchors.left: checkboxCountUp.left
             anchors.leftMargin: 20
             text: i18n.tr("Delay")
-            visible: fischer
+            visible: checkboxFischer.checked
             anchors.top: checkboxFischer.bottom
         }
-
-        // Date picker for delay time
         DatePicker {
             id: datePickerdelay
             width: parent.width/8
@@ -65,10 +56,10 @@ Tab {
             anchors.leftMargin: 20
             anchors.topMargin: 20
             anchors.left: checkboxCountUp.left
-            date: new Date(0,0,0,0,delay_minutes,delay_seconds,0)
+            date: new Date(0,0,0,0,mainView.delay_minutes,mainView.delay_seconds,0)
             mode: "Minutes|Seconds"
             height: parent.height/4
-            visible: fischer // visible only for certain modes
+            visible: checkboxFischer.checked // visible only for certain modes
             onDateChanged: {if (!startup) {
                     new_settings = true;
                 }}
@@ -79,7 +70,7 @@ Tab {
         }
 
         // Checkbox for count up mode
-        CheckBox {
+        Switch {
             id: checkboxCountUp
             anchors.top: parent.top
             Label {
@@ -91,13 +82,12 @@ Tab {
             anchors.topMargin: parent.height/10
             anchors.left: datePicker2.right
             anchors.leftMargin: parent.width/30
-            checked: countUp
-            onCheckedChanged: { countUp = checkboxCountUp.checked;
+            checked: mainView.countUp
+            onCheckedChanged: {
                                 new_settings = true;
-                                if (fischer) {
-                                    if (countUp) {
+                                if (checkboxFischer.checked) {
+                                    if (checkboxCountUp.checked) {
                                         checkboxFischer.checked = false;
-                                        fischer = false;
                                     }
                                 }
                                }
@@ -109,7 +99,7 @@ Tab {
             anchors.topMargin: 20
             anchors.left: parent.left
             anchors.leftMargin: 20
-            text: i18n.tr("Player 1" + startup)
+            text: i18n.tr("Player 1")
         }
         DatePicker {
             width: parent.width/8
@@ -117,7 +107,7 @@ Tab {
             anchors.leftMargin: 20
             anchors.topMargin: 20
             anchors.left: parent.left
-            date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
+            //date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
             id: datePicker1
             mode: "Minutes|Seconds"
             onDateChanged: {if (!startup) {
@@ -135,7 +125,7 @@ Tab {
             anchors.topMargin: 20
             anchors.left: datePicker1.right
             anchors.leftMargin: 20
-            text: i18n.tr("Player 2" + new_settings)
+            text: i18n.tr("Player 2")
         }
         DatePicker {
             width: parent.width/8
@@ -143,7 +133,7 @@ Tab {
             anchors.leftMargin: 20
             anchors.topMargin: 20
             anchors.left: datePicker1.right
-            date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
+            //date: new Date(0,0,0,0,first_player_minutes,first_player_seconds,0)
             id: datePicker2
             mode: "Minutes|Seconds"
             onDateChanged: {    if (!startup) {
@@ -161,15 +151,23 @@ Tab {
             visible: true
             id: newSettingsButton
             anchors.top: datePicker1.bottom
-            text: "Use new settings"
+            text: i18n.tr("Set clock")
             color: (new_settings) ? "green" : "gray"
             onClicked: {new_settings = false;
-                        mainView.first_player_minutes = datePicker1.minutes;
-                        mainView.first_player_seconds = datePicker1.seconds;
-                        mainView.second_player_minutes = datePicker2.minutes;
-                        mainView.second_player_seconds = datePicker2.seconds;}
+                        mainView.initial_first_player_minutes = datePicker1.minutes;
+                        mainView.initial_first_player_seconds = datePicker1.seconds;
+                        mainView.initial_second_player_minutes = datePicker2.minutes;
+                        mainView.initial_second_player_seconds = datePicker2.seconds;
+                        mainView.finished = false;
+                        mainView.is_first_player_timed = false;
+                        mainView.is_second_player_timed = false;
+                        mainView.paused = false;
+                        mainView.fischer = checkboxFischer.checked;
+                        mainView.countUp = checkboxCountUp.checked;
+                        mainView.reset()}
         }
 
     }
+
 }
 
