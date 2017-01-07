@@ -124,7 +124,7 @@ MainView {
                     firstPlayerCountDown()
                     secondPlayerCountUp()
              }
-        else {
+        else if (is_second_player_timed) {
             firstPlayerCountUp()
             secondPlayerCountDown()
         }
