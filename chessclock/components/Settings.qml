@@ -107,7 +107,7 @@ Tab {
              Dialog {
                  id: dialogCountUp
                  title: i18n.tr("Count Up")
-                 text: i18n.tr("In this time control the total time used for each of the players are recorded.")
+                 text: i18n.tr("In this time control the total time used by each of the players is recorded.")
                  Button {
                      text: i18n.tr("Is that all?")
                      onClicked: PopupUtils.close(dialogCountUp)
