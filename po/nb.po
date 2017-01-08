@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-04 17:55+0000\n"
+"POT-Creation-Date: 2017-01-07 21:46+0000\n"
 "PO-Revision-Date: 2017-01-04 18:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -163,9 +163,9 @@ msgid "I understand!"
 msgstr "Jeg forstår!"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:110
+#, fuzzy
 msgid ""
-"In this time control the total time used for each of the players are "
-"recorded."
+"In this time control the total time used by each of the players is recorded."
 msgstr "I denne tidskontrollen måles den totale tiden hver spiller bruker."
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:112
@@ -192,7 +192,7 @@ msgstr "Bruk instillinger"
 msgid "Delay"
 msgstr "Forsinkelse"
 
-#: /home/jonas/apps/build-chessclock-UbuntuSDK_for_phone_GCC_armhf_ubuntu_sdk_15_04-Release/chessclock/chessclock.desktop.h:1
+#: /home/jonas/repos/build-chessclock-Ubuntu_Device_GCC_armhf_ubuntu_sdk_15_04_meizu-Debug/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr "sjakkur"
 
