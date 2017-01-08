@@ -38,6 +38,9 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     case 3: // hour glass
                         timeChangedHourGlass()
                         break
+                    case 4: // Bronstein
+                        timeChangedBronstein()
+                        break
                     }
                 }
                 if ( mainView.isGameOver() ) {
@@ -105,7 +108,26 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                         second_player_seconds -= 60;
                                         second_player_minutes += 1;
                                     }
+                                } else if (mainView.mode === 4 && !paused && is_second_player_timed && !finished) {
+                                    if (mainView.delay_left <= 0) {
+                                        second_player_seconds += delay_seconds
+                                        second_player_minutes += delay_minutes
+                                    } else {
+                                        second_player_seconds = bronstein_start_seconds_second_player
+                                        second_player_minutes = bronstein_start_minutes_second_player
+                                        second_player_tenth = bronstein_start_tenth_second_player
+                                    }
+
+                                    mainView.delay_left = mainView.delay_seconds*10 + mainView.delay_minutes*600
+                                    if ( second_player_seconds >= 60 ) {
+                                        second_player_seconds -= 60;
+                                        second_player_minutes += 1;
+                                    }
+                                    bronstein_start_seconds_first_player = first_player_seconds
+                                    bronstein_start_minutes_first_player = first_player_minutes
+                                    bronstein_start_tenth_first_player = first_player_tenth
                                 }
+
                                 if (is_second_player_timed && !muted){ click.play() }
                                 is_second_player_timed = false
                                 is_first_player_timed = true
@@ -149,11 +171,31 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                          first_player_seconds -= 60;
                                          first_player_minutes += 1;
                                      }
-                                 }
+                                 } else if (mainView.mode === 4 && !paused && is_first_player_timed && !finished) {
+                                    if (mainView.delay_left <= 0) {
+                                        first_player_seconds += delay_seconds
+                                        first_player_minutes += delay_minutes
+                                    } else {
+                                        first_player_seconds = bronstein_start_seconds_first_player
+                                        first_player_minutes = bronstein_start_minutes_first_player
+                                        first_player_tenth = bronstein_start_tenth_first_player
+                                    }
+
+                                    mainView.delay_left = mainView.delay_seconds*10 + mainView.delay_minutes*600
+                                    if ( first_player_seconds >= 60 ) {
+                                        first_player_seconds -= 60;
+                                        first_player_minutes += 1;
+                                    }
+
+                                    bronstein_start_seconds_second_player = second_player_seconds
+                                    bronstein_start_minutes_second_player = second_player_minutes
+                                    bronstein_start_tenth_second_player = second_player_tenth
+                                }
                                 if (is_first_player_timed && !muted){ click.play() }
                                 is_first_player_timed = false
                                 is_second_player_timed = true
                                 }
+
                 }
         }
 

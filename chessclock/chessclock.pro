@@ -40,4 +40,5 @@ INSTALLS+=config_files qml_files desktop_file
 DISTFILES += \
     components/Settings.qml \
     components/About.qml \
-    components/Clock.qml
+    components/Clock.qml \
+    components/InfoPage.qml

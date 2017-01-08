@@ -30,11 +30,18 @@ MainView {
     property int initial_second_player_seconds: 0
     property int delay_seconds: 5
     property int delay_minutes: 0
+    property int bronstein_start_seconds_first_player: 0
+    property int bronstein_start_minutes_first_player: 0
+    property int bronstein_start_tenth_first_player: 0
+    property int bronstein_start_seconds_second_player: 0
+    property int bronstein_start_minutes_second_player: 0
+    property int bronstein_start_tenth_second_player: 0
+    property int delay_left: delay_seconds*10 + delay_minutes*600
     property bool is_first_player_timed: false
     property bool is_second_player_timed: false
     property bool paused: false
     property bool finished: false
-    property int mode: 0 // 0: sudden death, 1: count up, 2: fischer, 3: hour glass
+    property int mode: 0 // 0: sudden death, 1: count up, 2: fischer, 3: hour glass, 4: Bronstein delay
     property bool muted: false
 
     function firstPlayerCountDown() {
@@ -121,12 +128,28 @@ MainView {
             finished = true
         }
         else if (is_first_player_timed) {
+            if (delay)
                     firstPlayerCountDown()
                     secondPlayerCountUp()
              }
         else if (is_second_player_timed) {
             firstPlayerCountUp()
             secondPlayerCountDown()
+        }
+    }
+
+    function timeChangedBronstein() {
+        if ((second_player_seconds<=0 && second_player_minutes<=0 && second_player_tenth <= 0)
+                || (first_player_seconds<=0 && first_player_minutes<=0 && first_player_tenth <=0)) {
+            finished = true
+        }
+        else if (is_first_player_timed) {
+                delay_left -= 1
+                firstPlayerCountDown()
+        }
+        else if (is_second_player_timed) {
+                delay_left -= 1
+                secondPlayerCountDown()
         }
     }
 
@@ -141,6 +164,14 @@ MainView {
         mainView.is_first_player_timed = false;
         mainView.is_second_player_timed = false;
         mainView.paused = false;
+        if (mode === 4) {
+            bronstein_start_seconds_first_player = first_player_seconds
+            bronstein_start_minutes_first_player = first_player_minutes
+            bronstein_start_tenth_first_player = first_player_tenth
+            bronstein_start_seconds_second_player = second_player_seconds
+            bronstein_start_minutes_second_player = second_player_minutes
+            bronstein_start_tenth_second_player = second_player_tenth
+        }
     }
 
     function showTenthFirstPlayer () {
@@ -162,18 +193,22 @@ MainView {
                 )
 
     }
+    PageStack {
+        id: mainStack
+        Component.onCompleted: push(tabs)
 
-    Tabs {
-        id: tabs
+        Tabs {
+            id: tabs
 
-        Clock {
-            id: clockTab
-        }
-        Settings {
-            id: settingsTab
-        }
-        About {
-            id: aboutTab
+            Clock {
+                id: clockTab
+            }
+            Settings {
+                id: settingsTab
+            }
+            About {
+                id: aboutTab
+            }
         }
     }
 }
