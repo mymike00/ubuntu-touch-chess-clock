@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-07 21:46+0000\n"
+"POT-Creation-Date: 2017-01-08 15:27+0000\n"
 "PO-Revision-Date: 2017-01-04 18:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -46,155 +46,150 @@ msgstr "Dato:"
 msgid "Chess clock"
 msgstr "Sjakkur"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:54
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:57
 msgid "Pause"
 msgstr "Stans"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:59
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:62
 msgid "Sounds"
 msgstr "Lyder"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:64
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:67
 msgid "Reset"
 msgstr "Omstart"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:12
+msgid "About time controls"
+msgstr "Om tidskontroller"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:29
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:49
+msgid "Sudden Death"
+msgstr "Sikker død"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:50
+msgid "Count Up"
+msgstr "Tell opp"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:31
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:51
+msgid "Fischer"
+msgstr "Fischer"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:32
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:52
+msgid "Hour Glass"
+msgstr "Timeglass"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:33
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:53
+msgid "Bronstein"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:35
+msgid "https://en.wikipedia.org/wiki/Chess_clock"
+msgstr "https://no.wikipedia.org/wiki/Sjakkur"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:38
+msgid "More on chess clocks..."
+msgstr "Mer om sjakkur..."
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:12
 msgid "Select time and mode"
 msgstr "Velg tid og modus"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:28
-msgid "About time controls"
-msgstr "Om tidskontroller"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:29
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:70
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:135
-msgid "Sudden Death"
-msgstr "Sikker død"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:30
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:109
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:135
-msgid "Count Up"
-msgstr "Tell opp"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:31
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:96
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:135
-msgid "Fischer"
-msgstr "Fischer"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:32
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:83
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:135
-msgid "Hour Glass"
-msgstr "Timeglass"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:34
-msgid "https://en.wikipedia.org/wiki/Chess_clock"
-msgstr "https://no.wikipedia.org/wiki/Sjakkur"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:37
-msgid "More on chess clocks..."
-msgstr "Mer om sjakkur..."
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:57
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:22
 msgid "Information"
 msgstr "Informasjon"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:71
-msgid ""
-"This is the simplest methodology. Each player is assigned a fixed amount of "
-"time for the whole game: once a player's main time expires, he loses the "
-"game."
-msgstr ""
-"Dette er den enkleste metodikken. Hver spiller får en gitt mengde tid for "
-"hele spillet: når en spiller går tom for tid, taper han."
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:73
-msgid "That was simple!"
-msgstr "Det var enkelt!"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:84
-msgid ""
-"A player loses in this time control when they allow the difference between "
-"both clocks to reach the specified total amount. For example, if the total "
-"is defined as one minute, both players start their clocks at thirty seconds. "
-"Every second the first player uses to think in their moves is subtracted "
-"from their clock and added to their opponent's clock. If they use thirty "
-"seconds to move, the difference between the clocks reaches one minute, and "
-"the time flag falls to indicate that they lose by time. If they have used "
-"twenty nine seconds and then push the clock's button, they have one second "
-"left on their clock and their opponent has fifty-nine seconds."
-msgstr ""
-"En spiller taper på tid når tidsforskjellen mellom klokkene når en viss "
-"mengde. For eksempel, dersom den maksimale tidsforskjellen er satt til ett "
-"minutt, starter spillerne med 30 sekunder hver. Hvert sekund den første "
-"spilleren bruker blir fjernet fra hans klokke og lagt til motstanderens "
-"klokke. Dersom spilleren bruker tretti sekunder på trekket, når "
-"tidsforskjellen ett minutt, og spilleren taper på tid. Dersom spilleren "
-"bruker 29 sekunder og så trykker på klokka, har han et sekund igjen på "
-"klokka og motspilleren har femti-ni sekunder."
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:86
-msgid "Ok, got it!"
-msgstr "Ok, skjønner!"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:97
-msgid ""
-"Before a player has made their move, a specified time increment is added to "
-"their clock. Time can be accumulated, so if the player moves within the "
-"delay period, their remaining time actually increases. For example, if the "
-"delay time is five seconds, and a player has four seconds left on their "
-"clock, as soon as their opponent moves, they receive the increment and has "
-"nine seconds to make a move. If they take two seconds to move, on the start "
-"of their next move they have twelve seconds."
-msgstr ""
-"Før en spiller gjennomfører et trekk, legges en gitt tid til spillerens "
-"klokke. Tiden kan samles opp, så dersom spilleren trekker for forsinkelsen, "
-"vil tiden på klokken øke. For eksempel, hvis forsinkelsen er fem sekunder, "
-"og en spiller har fire sekunder igjen på klokka, så vil spilleren ha ni "
-"sekunder igjen så snart motspilleren trekker. Hvis spilleren bruker to "
-"sekunder på det neste trekket, har han tolv sekunder i starten av neste "
-"trekk."
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:99
-msgid "I understand!"
-msgstr "Jeg forstår!"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:110
-#, fuzzy
-msgid ""
-"In this time control the total time used by each of the players is recorded."
-msgstr "I denne tidskontrollen måles den totale tiden hver spiller bruker."
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:112
-msgid "Is that all?"
-msgstr "Er det alt?"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:125
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:39
 msgid "Mode"
 msgstr "Modus"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:160
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:78
 msgid "Player 1"
 msgstr "Spiller 1"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:186
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:104
 msgid "Player 2"
 msgstr "Spiller 2"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:214
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:132
 msgid "Set clock"
 msgstr "Bruk instillinger"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:239
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:157
 msgid "Delay"
 msgstr "Forsinkelse"
 
 #: /home/jonas/repos/build-chessclock-Ubuntu_Device_GCC_armhf_ubuntu_sdk_15_04_meizu-Debug/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr "sjakkur"
+
+#~ msgid ""
+#~ "This is the simplest methodology. Each player is assigned a fixed amount "
+#~ "of time for the whole game: once a player's main time expires, he loses "
+#~ "the game."
+#~ msgstr ""
+#~ "Dette er den enkleste metodikken. Hver spiller får en gitt mengde tid for "
+#~ "hele spillet: når en spiller går tom for tid, taper han."
+
+#~ msgid "That was simple!"
+#~ msgstr "Det var enkelt!"
+
+#~ msgid ""
+#~ "A player loses in this time control when they allow the difference "
+#~ "between both clocks to reach the specified total amount. For example, if "
+#~ "the total is defined as one minute, both players start their clocks at "
+#~ "thirty seconds. Every second the first player uses to think in their "
+#~ "moves is subtracted from their clock and added to their opponent's clock. "
+#~ "If they use thirty seconds to move, the difference between the clocks "
+#~ "reaches one minute, and the time flag falls to indicate that they lose by "
+#~ "time. If they have used twenty nine seconds and then push the clock's "
+#~ "button, they have one second left on their clock and their opponent has "
+#~ "fifty-nine seconds."
+#~ msgstr ""
+#~ "En spiller taper på tid når tidsforskjellen mellom klokkene når en viss "
+#~ "mengde. For eksempel, dersom den maksimale tidsforskjellen er satt til "
+#~ "ett minutt, starter spillerne med 30 sekunder hver. Hvert sekund den "
+#~ "første spilleren bruker blir fjernet fra hans klokke og lagt til "
+#~ "motstanderens klokke. Dersom spilleren bruker tretti sekunder på trekket, "
+#~ "når tidsforskjellen ett minutt, og spilleren taper på tid. Dersom "
+#~ "spilleren bruker 29 sekunder og så trykker på klokka, har han et sekund "
+#~ "igjen på klokka og motspilleren har femti-ni sekunder."
+
+#~ msgid "Ok, got it!"
+#~ msgstr "Ok, skjønner!"
+
+#~ msgid ""
+#~ "Before a player has made their move, a specified time increment is added "
+#~ "to their clock. Time can be accumulated, so if the player moves within "
+#~ "the delay period, their remaining time actually increases. For example, "
+#~ "if the delay time is five seconds, and a player has four seconds left on "
+#~ "their clock, as soon as their opponent moves, they receive the increment "
+#~ "and has nine seconds to make a move. If they take two seconds to move, on "
+#~ "the start of their next move they have twelve seconds."
+#~ msgstr ""
+#~ "Før en spiller gjennomfører et trekk, legges en gitt tid til spillerens "
+#~ "klokke. Tiden kan samles opp, så dersom spilleren trekker for "
+#~ "forsinkelsen, vil tiden på klokken øke. For eksempel, hvis forsinkelsen "
+#~ "er fem sekunder, og en spiller har fire sekunder igjen på klokka, så vil "
+#~ "spilleren ha ni sekunder igjen så snart motspilleren trekker. Hvis "
+#~ "spilleren bruker to sekunder på det neste trekket, har han tolv sekunder "
+#~ "i starten av neste trekk."
+
+#~ msgid "I understand!"
+#~ msgstr "Jeg forstår!"
+
+#, fuzzy
+#~ msgid ""
+#~ "In this time control the total time used by each of the players is "
+#~ "recorded."
+#~ msgstr "I denne tidskontrollen måles den totale tiden hver spiller bruker."
+
+#~ msgid "Is that all?"
+#~ msgstr "Er det alt?"
 
 #~ msgid ""
 #~ "A player loses in this time control when they allow the difference "
