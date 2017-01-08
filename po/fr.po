@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-08 15:27+0000\n"
+"POT-Creation-Date: 2017-01-08 15:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,26 +62,31 @@ msgid "About time controls"
 msgstr "À propos des mode de contrôle de temps"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:29
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:49
 msgid "Sudden Death"
 msgstr "Mort subite"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:92
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:50
 msgid "Count Up"
 msgstr "Comptage"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:31
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:79
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:51
 msgid "Fischer"
 msgstr "Cadence Fischer"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:32
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:66
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:52
 msgid "Hour Glass"
 msgstr "Sablier"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:33
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:105
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:53
 msgid "Bronstein"
 msgstr ""
@@ -93,6 +98,101 @@ msgstr "https://fr.wikipedia.org/wiki/Pendule_d%27%C3%A9checs"
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:38
 msgid "More on chess clocks..."
 msgstr "En savoir plus sur le pendule d'échecs"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:54
+msgid ""
+"This is the simplest methodology. Each player is assigned a fixed amount of "
+"time for the whole game: once a player's main time expires, he loses the "
+"game."
+msgstr ""
+"Il s'agit de la méthode la plus simple. Une quantité fixe de temps est "
+"assignée à chaque joueur pour toute la partie[nbsp]: lorsque celle-ci expire "
+"pour un joueur, celui-ci perd la partie."
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:56
+msgid "That was simple!"
+msgstr "C'était simple[nbsp]!"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:67
+msgid ""
+"A player loses in this time control when they allow the difference between "
+"both clocks to reach the specified total amount. For example, if the total "
+"is defined as one minute, both players start their clocks at thirty seconds. "
+"Every second the first player uses to think in their moves is subtracted "
+"from their clock and added to their opponent's clock. If they use thirty "
+"seconds to move, the difference between the clocks reaches one minute, and "
+"the time flag falls to indicate that they lose by time. If they have used "
+"twenty nine seconds and then push the clock's button, they have one second "
+"left on their clock and their opponent has fifty-nine seconds."
+msgstr ""
+"Dans ce mode de contrôle du temps, un joueur perd lorsque la différence "
+"entre les deux pendules atteint un temps défini. Par exemple, si celui-ci "
+"est défini à une minute, les deux joueurs démarrent leurs pendules à trente "
+"secondes. Chaque seconde que le premier joueur utilise pour réfléchir à ses "
+"mouvement est soustrait de son pendule et ajouté à la pendule de son "
+"adversaire S'il utilise trente secondes pour se déplacer, la différence "
+"entre les pendules atteint une minute et le drapeau tombe pour indiquer une "
+"défaite au temps. S'il a utilisé vingt-neuf secondes puis a appuyé sur le "
+"bouton de la pendule, il lui reste une seconde à sa pendule et la pendule de "
+"son adversaire en a elle cinquante-neuf."
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:69
+msgid "Ok, got it!"
+msgstr "Ok, c'est compris[nbsp]!"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:80
+msgid ""
+"Before a player has made their move, a specified time increment is added to "
+"their clock. Time can be accumulated, so if the player moves within the "
+"delay period, their remaining time actually increases. For example, if the "
+"delay time is five seconds, and a player has four seconds left on their "
+"clock, as soon as their opponent moves, they receive the increment and has "
+"nine seconds to make a move. If they take two seconds to move, on the start "
+"of their next move they have twelve seconds."
+msgstr ""
+"Avant qu'un joueur ne fasse son déplacement, un incrément de temps spécifié "
+"est ajouté à la pendule. Le temps peut être accumulé, donc si le joueur "
+"déplace une pièce dans la limite de temps imparti, sa réserve de temps "
+"augmente. Par exemple, si le délai de temps est de cinq secondes et qu'un "
+"joueur a quatre secondes en réserve de temps, il reçoit un incrément dès que "
+"son adversaire a joué et dispose de neuf secondes en tout pour faire son "
+"déplacement. S'il met deux secondes pour se déplacer, il aura douze secondes "
+"au début de son prochain déplacement (9-2+5)."
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:82
+msgid "I understand!"
+msgstr "Je comprends[nbsp]!"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:93
+#, fuzzy
+msgid ""
+"In this time control the total time used by each of the players is recorded."
+msgstr ""
+"Dans ce mode de contrôle du temps, le temps total utilisé pour chacun des "
+"joueurs est enregistré."
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:95
+msgid "Is that all?"
+msgstr "C'est tout[nbsp]?"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:106
+msgid ""
+"With the Bronstein timing method, the increment is always added after the "
+"move. But unlike Fischer, not always the maximum increment is added. If a "
+"player expends more than the specified increment, then the entire increment "
+"is added to the player's clock. But if a player has moved faster than the "
+"time increment, only the exact amount of time expended by the player is "
+"added. For example, if the delay is five seconds, the player has ten seconds "
+"left in their clock before their turn and during their turn they spend three "
+"seconds, after they press the clock button to indicate the end of their "
+"turn, their clock increases by only three seconds (not five). This ensures "
+"that the time left on the clock can never increase, even if a player makes "
+"fast moves."
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:108
+msgid "Acknowledged."
+msgstr ""
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:12
 msgid "Select time and mode"
@@ -122,76 +222,6 @@ msgstr "Régler la pendule"
 msgid "Delay"
 msgstr "Délai"
 
-#: /home/jonas/repos/build-chessclock-Ubuntu_Device_GCC_armhf_ubuntu_sdk_15_04_meizu-Debug/chessclock/chessclock.desktop.h:1
+#: /home/jonas/repos/build-chessclock-Ubuntu_Device_GCC_armhf_ubuntu_sdk_15_04_meizu-Release/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr "pendule d'échecs"
-
-#~ msgid ""
-#~ "This is the simplest methodology. Each player is assigned a fixed amount "
-#~ "of time for the whole game: once a player's main time expires, he loses "
-#~ "the game."
-#~ msgstr ""
-#~ "Il s'agit de la méthode la plus simple. Une quantité fixe de temps est "
-#~ "assignée à chaque joueur pour toute la partie[nbsp]: lorsque celle-ci "
-#~ "expire pour un joueur, celui-ci perd la partie."
-
-#~ msgid "That was simple!"
-#~ msgstr "C'était simple[nbsp]!"
-
-#~ msgid ""
-#~ "A player loses in this time control when they allow the difference "
-#~ "between both clocks to reach the specified total amount. For example, if "
-#~ "the total is defined as one minute, both players start their clocks at "
-#~ "thirty seconds. Every second the first player uses to think in their "
-#~ "moves is subtracted from their clock and added to their opponent's clock. "
-#~ "If they use thirty seconds to move, the difference between the clocks "
-#~ "reaches one minute, and the time flag falls to indicate that they lose by "
-#~ "time. If they have used twenty nine seconds and then push the clock's "
-#~ "button, they have one second left on their clock and their opponent has "
-#~ "fifty-nine seconds."
-#~ msgstr ""
-#~ "Dans ce mode de contrôle du temps, un joueur perd lorsque la différence "
-#~ "entre les deux pendules atteint un temps défini. Par exemple, si celui-ci "
-#~ "est défini à une minute, les deux joueurs démarrent leurs pendules à "
-#~ "trente secondes. Chaque seconde que le premier joueur utilise pour "
-#~ "réfléchir à ses mouvement est soustrait de son pendule et ajouté à la "
-#~ "pendule de son adversaire S'il utilise trente secondes pour se déplacer, "
-#~ "la différence entre les pendules atteint une minute et le drapeau tombe "
-#~ "pour indiquer une défaite au temps. S'il a utilisé vingt-neuf secondes "
-#~ "puis a appuyé sur le bouton de la pendule, il lui reste une seconde à sa "
-#~ "pendule et la pendule de son adversaire en a elle cinquante-neuf."
-
-#~ msgid "Ok, got it!"
-#~ msgstr "Ok, c'est compris[nbsp]!"
-
-#~ msgid ""
-#~ "Before a player has made their move, a specified time increment is added "
-#~ "to their clock. Time can be accumulated, so if the player moves within "
-#~ "the delay period, their remaining time actually increases. For example, "
-#~ "if the delay time is five seconds, and a player has four seconds left on "
-#~ "their clock, as soon as their opponent moves, they receive the increment "
-#~ "and has nine seconds to make a move. If they take two seconds to move, on "
-#~ "the start of their next move they have twelve seconds."
-#~ msgstr ""
-#~ "Avant qu'un joueur ne fasse son déplacement, un incrément de temps "
-#~ "spécifié est ajouté à la pendule. Le temps peut être accumulé, donc si le "
-#~ "joueur déplace une pièce dans la limite de temps imparti, sa réserve de "
-#~ "temps augmente. Par exemple, si le délai de temps est de cinq secondes et "
-#~ "qu'un joueur a quatre secondes en réserve de temps, il reçoit un "
-#~ "incrément dès que son adversaire a joué et dispose de neuf secondes en "
-#~ "tout pour faire son déplacement. S'il met deux secondes pour se déplacer, "
-#~ "il aura douze secondes au début de son prochain déplacement (9-2+5)."
-
-#~ msgid "I understand!"
-#~ msgstr "Je comprends[nbsp]!"
-
-#, fuzzy
-#~ msgid ""
-#~ "In this time control the total time used by each of the players is "
-#~ "recorded."
-#~ msgstr ""
-#~ "Dans ce mode de contrôle du temps, le temps total utilisé pour chacun des "
-#~ "joueurs est enregistré."
-
-#~ msgid "Is that all?"
-#~ msgstr "C'est tout[nbsp]?"
