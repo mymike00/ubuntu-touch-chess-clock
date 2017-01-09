@@ -146,7 +146,6 @@ MainView {
             finished = true
         }
         else if (is_first_player_timed) {
-            if (delay)
                     firstPlayerCountDown()
                     secondPlayerCountUp()
              }
