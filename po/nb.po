@@ -26,48 +26,48 @@ msgstr "Om"
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:69
 #, fuzzy
 msgid "Author"
-msgstr "Forfatter:"
+msgstr "Forfatter"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:73
 #, fuzzy
 msgid "Contact"
-msgstr "Kontakt:"
+msgstr "Kontakt"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:77
 #, fuzzy
 msgid "Website"
-msgstr "Hjemmeside:"
+msgstr "Hjemmeside"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:81
 #, fuzzy
 msgid "Version"
-msgstr "Versjon:"
+msgstr "Versjon"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:85
 #, fuzzy
 msgid "Date"
-msgstr "Dato:"
+msgstr "Dato"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:86
 msgid "January 9, 2017"
-msgstr ""
+msgstr "9. januar 2017"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
 msgid "Help"
-msgstr ""
+msgstr "Hjelp"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:47
 msgid "Pause/reset button"
-msgstr ""
+msgstr "Pause- og resetknapp"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
 #, fuzzy
 msgid "Press: pause clocks"
-msgstr "Sjakkur"
+msgstr "Trykk: sett klokkene på pause"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
 msgid "Hold: reset clocks to last setting"
-msgstr ""
+msgstr "Hold: reset til forrige instillinger"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
 msgid "About time controls"
@@ -211,7 +211,7 @@ msgstr "Mottat."
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:37
 msgid "Settings"
-msgstr ""
+msgstr "Innstillinger"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:52
 msgid "Information"
@@ -236,7 +236,7 @@ msgstr "Modus"
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:104
 #, fuzzy
 msgid "Bronstein Delay"
-msgstr "Bronstein"
+msgstr "Bronstein-modus"
 
 #: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:128
 msgid "Player 1"
