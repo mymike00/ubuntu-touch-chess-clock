@@ -1,3 +1,21 @@
+/*
+ * Copyright (C) 2017 Jonas Tjemsland
+ *
+ * This file is part of the Ubuntu Chess Clock.
+ *
+ * Ubuntu Chess Clock is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * Ubuntu Chess Clock is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Pickers 1.3
@@ -9,7 +27,7 @@ import Ubuntu.Components.Popups 1.3
 Page {
 
     header: PageHeader {
-        title: i18n.tr("About time controls")
+        title: i18n.tr("Help")
         flickable: settingsPlugin
     }
 
@@ -26,6 +44,13 @@ Page {
                 left: parent.left
                 right: parent.right
             }
+            ListItem.Header {text: i18n.tr("Pause/reset button")}
+            ListItem.Standard {
+                text: i18n.tr("Press: pause clocks")+"\n"+i18n.tr("Hold: reset clocks to last setting")
+                iconSource: "chessclock.png"
+            }
+
+            ListItem.Header {text: i18n.tr("About time controls")}
             ListItem.Standard { text: i18n.tr("Sudden Death"); onClicked: PopupUtils.open(infoSuddenDeath) }
             ListItem.Standard { text: i18n.tr("Count Up"); onClicked: PopupUtils.open(infoCountUp) }
             ListItem.Standard { text: i18n.tr("Fischer"); onClicked: PopupUtils.open(infoFischer) }
@@ -45,6 +70,7 @@ Page {
 
     // The information about the different time controls are downloaded from https://en.wikipedia.org/wiki/Time_control
     // and https://en.wikipedia.org/wiki/Chess_clock
+
     // Info popover for sudden death
     Component {
          id: infoSuddenDeath
