@@ -44,15 +44,39 @@ import Qt.labs.settings 1.0
                     }
                 }
             ]
+
             trailingActionBar.actions: [
                 Action {
                     id: infoAction
                     objectName: "infoButton"
                     text: i18n.tr("Information")
-                    iconName: "info"
+                    iconName: "help"
                     onTriggered: {
                         mainStack.push(Qt.resolvedUrl("InfoPage.qml"))
                     }
+                },
+                Action {
+                    objectName: "pauseButton"
+                    visible: false
+                    text: i18n.tr("Pause")
+                    iconName: (!paused) ? "media-playback-pause" : "media-playback-start"
+                    onTriggered: { paused = !paused;}
+                },
+                Action {
+                    text: i18n.tr("Sounds")
+                    iconName: (muted) ? "audio-speakers-muted-symbolic" : "audio-speakers-symbolic"
+                    onTriggered: { mainView.muted = !mainView.muted }
+                },
+                Action {
+                    text: i18n.tr("Reset")
+                    visible: false
+                    iconName: "reset"
+                    onTriggered: { mainView.reset() }
+                },
+                Action {
+                    text: i18n.tr("About")
+                    iconName: "info"
+                    onTriggered: { mainStack.push(Qt.resolvedUrl("AboutPage.qml")) }
                 }
             ]
         }

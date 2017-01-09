@@ -25,9 +25,6 @@ import Ubuntu.Components.ListItems 1.3
 import QtSystemInfo 5.0
 import Ubuntu.Components.Styles 1.3
 import Qt.labs.settings 1.0
-// Used for compiling on desktop
-//import "components"
-//import "resources"
 
 MainView {
     id : mainView

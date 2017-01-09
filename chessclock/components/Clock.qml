@@ -27,6 +27,11 @@ import QtSystemInfo 5.0
 import Ubuntu.Components.ListItems 1.0 as ListItem
 
     Page {
+        Rectangle {
+            anchors.fill: parent
+            color: "black"
+        }
+
         SoundEffect {
             id: alarm
             source:  {"alarm1.wav"}
@@ -66,41 +71,6 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
         }
 
         header:PageHeader {visible: false}
-        /*    id: defaultHeader
-
-            //property var view: parent.view
-            //property Page parentPage: parent
-
-            title: i18n.tr("Chess clock")
-           // flickable: view
-
-            // FIXME: Why need this?!
-            //leadingActionBar.actions: null
-
-            trailingActionBar.actions: [
-                Action {
-                    objectName: "pauseButton"
-                    text: i18n.tr("Pause")
-                    iconName: (!paused) ? "media-playback-pause" : "media-playback-start"
-                    onTriggered: { paused = !paused;}
-                },
-                Action {
-                    text: i18n.tr("Sounds")
-                    iconName: (muted) ? "audio-speakers-muted-symbolic" : "audio-speakers-symbolic"
-                    onTriggered: { mainView.muted = !mainView.muted }
-                },
-                Action {
-                    text: i18n.tr("Reset")
-                    iconName: "reset"
-                    onTriggered: { mainView.reset() }
-                },
-                Action {
-                    text: i18n.tr("About")
-                    iconName: "info"
-                    onTriggered: { mainStack.push(Qt.resolvedUrl("AboutPage.qml")) }
-                }
-            ]
-        }*/
 
             Button {
                     anchors.right: parent.right
