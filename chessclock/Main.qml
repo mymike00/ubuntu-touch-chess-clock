@@ -23,6 +23,7 @@ import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
 import Ubuntu.Components.ListItems 1.3
 import QtSystemInfo 5.0
+import Ubuntu.Components.Styles 1.3
 import Qt.labs.settings 1.0
 // Used for compiling on desktop
 //import "components"
@@ -213,17 +214,18 @@ MainView {
                 )
 
     }
+
     PageStack {
         id: mainStack
         Component.onCompleted:  push(clockTab)
         Clock {
             id: clockTab
-
             BottomEdge {
                 id: bottomEdge
+                hint.iconName: "settings"
                 preloadContent: true
                 height: parent.height
-                hint.text: "Injected collapse"
+                hint.text: "Settings"
                 contentComponent: SettingsPage { id: settingsPage }
             }
         }

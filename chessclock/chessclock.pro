@@ -11,6 +11,7 @@ CONF_FILES +=  chessclock.apparmor \
                resources/chessclock.png \
                resources/reset.png \
                resources/alarm1.wav \
+               resources/chessclock_transparrent.png \
                resources/click.wav
 
 AP_TEST_FILES += tests/autopilot/run \
@@ -43,4 +44,5 @@ DISTFILES += \
     components/Clock.qml \
     components/InfoPage.qml \
     components/SettingsPage.qml \
-    components/AboutPage.qml
+    components/AboutPage.qml \
+    components/ClockHeader.qml

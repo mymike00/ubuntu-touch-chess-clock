@@ -27,7 +27,6 @@ import QtSystemInfo 5.0
 import Ubuntu.Components.ListItems 1.0 as ListItem
 
     Page {
-
         SoundEffect {
             id: alarm
             source:  {"alarm1.wav"}
@@ -65,8 +64,9 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                 }
             }
         }
-        header: PageHeader {
-            id: defaultHeader
+
+        header:PageHeader {visible: false}
+        /*    id: defaultHeader
 
             //property var view: parent.view
             //property Page parentPage: parent
@@ -100,7 +100,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                     onTriggered: { mainStack.push(Qt.resolvedUrl("AboutPage.qml")) }
                 }
             ]
-        }
+        }*/
 
             Button {
                     anchors.right: parent.right
@@ -229,4 +229,6 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                                 }
 
                 }
+            ClockHeader {id: clockHeader}
+
         }
