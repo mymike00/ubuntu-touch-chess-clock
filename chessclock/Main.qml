@@ -1,9 +1,29 @@
+/*
+ * Copyright (C) 2017 Jonas Tjemsland
+ *
+ * This file is part of the Ubuntu Chess Clock.
+ *
+ * Ubuntu Chess Clock is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * Ubuntu Chess Clock is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Pickers 1.0
+import Ubuntu.Components.Pickers 1.3
 import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
 import Ubuntu.Components.ListItems 1.3
+import QtSystemInfo 5.0
+import Qt.labs.settings 1.0
 // Used for compiling on desktop
 //import "components"
 //import "resources"
@@ -195,20 +215,18 @@ MainView {
     }
     PageStack {
         id: mainStack
-        Component.onCompleted: push(tabs)
+        Component.onCompleted:  push(clockTab)
+        Clock {
+            id: clockTab
 
-        Tabs {
-            id: tabs
-
-            Clock {
-                id: clockTab
-            }
-            Settings {
-                id: settingsTab
-            }
-            About {
-                id: aboutTab
+            BottomEdge {
+                id: bottomEdge
+                preloadContent: true
+                height: parent.height
+                hint.text: "Injected collapse"
+                contentComponent: SettingsPage { id: settingsPage }
             }
         }
     }
+
 }

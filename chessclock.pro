@@ -6,7 +6,7 @@ TEMPLATE = subdirs
 #load Ubuntu specific features
 load(ubuntu-click)
 
-SUBDIRS += chessclock
+SUBDIRS +=  chessclock
 
 # specify the manifest file, this file is required for click
 # packaging and for the IDE to create runconfigurations

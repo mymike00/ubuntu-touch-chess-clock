@@ -21,6 +21,8 @@ OTHER_FILES += $${CONF_FILES} \
                $${AP_TEST_FILES} \
                chessclock.desktop
 
+SUBDIRS += components
+
 #specify where the qml/js files are installed to
 qml_files.path = /chessclock
 qml_files.files += $${QML_FILES}
@@ -38,7 +40,7 @@ desktop_file.CONFIG += no_check_exist
 INSTALLS+=config_files qml_files desktop_file
 
 DISTFILES += \
-    components/Settings.qml \
-    components/About.qml \
     components/Clock.qml \
-    components/InfoPage.qml
+    components/InfoPage.qml \
+    components/SettingsPage.qml \
+    components/AboutPage.qml
