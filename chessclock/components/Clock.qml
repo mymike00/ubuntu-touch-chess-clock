@@ -101,7 +101,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
                         }
                         color: "black"
                         anchors.centerIn: parent
-                        font.pixelSize: 100
+                        font.pixelSize: 120
                     }
                     onClicked: {if (mainView.mode === 2 && !paused && is_second_player_timed && !finished) {
                                     second_player_seconds += delay_seconds;
