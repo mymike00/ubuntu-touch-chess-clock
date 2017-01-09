@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-08 15:31+0000\n"
+"POT-Creation-Date: 2017-01-09 15:14+0000\n"
 "PO-Revision-Date: 2017-01-04 18:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,89 +18,99 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:8
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:30
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:77
 msgid "About"
 msgstr "Om"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:32
-msgid "Author:"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:69
+#, fuzzy
+msgid "Author"
 msgstr "Forfatter:"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:33
-msgid "Contact:"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:73
+#, fuzzy
+msgid "Contact"
 msgstr "Kontakt:"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:34
-msgid "Website:"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:77
+#, fuzzy
+msgid "Website"
 msgstr "Hjemmeside:"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:35
-msgid "Version:"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:81
+#, fuzzy
+msgid "Version"
 msgstr "Versjon:"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/About.qml:36
-msgid "Date:"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:85
+#, fuzzy
+msgid "Date"
 msgstr "Dato:"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:12
-msgid "Chess clock"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:86
+msgid "January 9, 2017"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
+msgid "Help"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:47
+msgid "Pause/reset button"
+msgstr ""
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
+#, fuzzy
+msgid "Press: pause clocks"
 msgstr "Sjakkur"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:57
-msgid "Pause"
-msgstr "Stans"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
+msgid "Hold: reset clocks to last setting"
+msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:62
-msgid "Sounds"
-msgstr "Lyder"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Clock.qml:67
-msgid "Reset"
-msgstr "Omstart"
-
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:12
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
 msgid "About time controls"
 msgstr "Om tidskontroller"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:29
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:49
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:54
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:79
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:100
 msgid "Sudden Death"
 msgstr "Sikker død"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:92
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:50
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:55
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:118
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:101
 msgid "Count Up"
 msgstr "Tell opp"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:31
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:79
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:51
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:56
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:105
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:102
 msgid "Fischer"
 msgstr "Fischer"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:32
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:66
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:52
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:57
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:92
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:103
 msgid "Hour Glass"
 msgstr "Timeglass"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:33
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:105
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:53
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:58
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:131
 msgid "Bronstein"
 msgstr "Bronstein"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:35
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:60
 msgid "https://en.wikipedia.org/wiki/Chess_clock"
 msgstr "https://no.wikipedia.org/wiki/Sjakkur"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:38
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:63
 msgid "More on chess clocks..."
 msgstr "Mer om sjakkur..."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:54
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:80
 msgid ""
 "This is the simplest methodology. Each player is assigned a fixed amount of "
 "time for the whole game: once a player's main time expires, he loses the "
@@ -109,11 +119,11 @@ msgstr ""
 "Dette er den enkleste metodikken. Hver spiller får en gitt mengde tid for "
 "hele spillet: når en spiller går tom for tid, taper han."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:56
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:82
 msgid "That was simple!"
 msgstr "Det var enkelt!"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:67
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:93
 msgid ""
 "A player loses in this time control when they allow the difference between "
 "both clocks to reach the specified total amount. For example, if the total "
@@ -134,11 +144,11 @@ msgstr ""
 "bruker 29 sekunder og så trykker på klokka, har han et sekund igjen på "
 "klokka og motspilleren har femti-ni sekunder."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:69
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:95
 msgid "Ok, got it!"
 msgstr "Ok, skjønner!"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:80
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:106
 msgid ""
 "Before a player has made their move, a specified time increment is added to "
 "their clock. Time can be accumulated, so if the player moves within the "
@@ -156,21 +166,21 @@ msgstr ""
 "sekunder på det neste trekket, har han tolv sekunder i starten av neste "
 "trekk."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:82
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:108
 msgid "I understand!"
 msgstr "Jeg forstår!"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:93
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:119
 #, fuzzy
 msgid ""
 "In this time control the total time used by each of the players is recorded."
 msgstr "I denne tidskontrollen måles den totale tiden hver spiller bruker."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:95
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:121
 msgid "Is that all?"
 msgstr "Er det alt?"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:106
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:132
 msgid ""
 "With the Bronstein timing method, the increment is always added after the "
 "move. But unlike Fischer, not always the maximum increment is added. If a "
@@ -184,52 +194,72 @@ msgid ""
 "that the time left on the clock can never increase, even if a player makes "
 "fast moves."
 msgstr ""
-"Med Bronsteins tidskontroll legges forsinkelsen til etter at spilleren "
-"har trukket. I motsetning til Fischer, legges ikke alltid den maksimale "
+"Med Bronsteins tidskontroll legges forsinkelsen til etter at spilleren har "
+"trukket. I motsetning til Fischer, legges ikke alltid den maksimale "
 "forsinkelsen til. Dersom en spiller bruker mer en den gitte forsinkelsen, "
 "legges hele forsinkelsen til spillerens tid. Om spilleren trekker fortere "
 "enn forsinkelsen, legges kun tiden spilleren har brukt på dette trekket til "
-"den gjenværende tiden. La for eksempel tidsforsinkelsen være fem sekunder "
-"og spilleren ha ti sekunder igjen på klokka. Dersom spilleren bruker tre "
+"den gjenværende tiden. La for eksempel tidsforsinkelsen være fem sekunder og "
+"spilleren ha ti sekunder igjen på klokka. Dersom spilleren bruker tre "
 "sekunder på trekket, vil den gjenværende tiden etter at spilleren har "
-"trykket på klokka øke med tre sekunder (og ikke fem). Dette sørger for"
-"at tiden igjen på klokka aldri kan øke, selv om spillerne trekker fort."
+"trykket på klokka øke med tre sekunder (og ikke fem). Dette sørger forat "
+"tiden igjen på klokka aldri kan øke, selv om spillerne trekker fort."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:108
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:134
 msgid "Acknowledged."
 msgstr "Mottat."
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:12
-msgid "Select time and mode"
-msgstr "Velg tid og modus"
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:37
+msgid "Settings"
+msgstr ""
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:22
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:52
 msgid "Information"
 msgstr "Informasjon"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:39
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:61
+msgid "Pause"
+msgstr "Stans"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:66
+msgid "Sounds"
+msgstr "Lyder"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:71
+msgid "Reset"
+msgstr "Omstart"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:93
 msgid "Mode"
 msgstr "Modus"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:78
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:104
+#, fuzzy
+msgid "Bronstein Delay"
+msgstr "Bronstein"
+
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:128
 msgid "Player 1"
 msgstr "Spiller 1"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:104
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:150
 msgid "Player 2"
 msgstr "Spiller 2"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:132
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:175
 msgid "Set clock"
 msgstr "Bruk instillinger"
 
-#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/Settings.qml:157
+#: /home/jonas/repos/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:199
 msgid "Delay"
 msgstr "Forsinkelse"
 
 #: /home/jonas/repos/build-chessclock-Ubuntu_Device_GCC_armhf_ubuntu_sdk_15_04_meizu-Release/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr "sjakkur"
+
+#~ msgid "Select time and mode"
+#~ msgstr "Velg tid og modus"
 
 #~ msgid ""
 #~ "A player loses in this time control when they allow the difference "
