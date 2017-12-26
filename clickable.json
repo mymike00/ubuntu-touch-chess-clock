@@ -1,0 +1,4 @@
+{
+  "template": "pure-qml-qmake",
+  "default": "kill clean build click_build install launch logs"
+}

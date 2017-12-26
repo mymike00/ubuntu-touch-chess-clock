@@ -24,6 +24,7 @@ qrc_*.cpp
 ui_*.h
 Makefile*
 *build-*
+build/*
 
 # QtCreator
 
@@ -36,3 +37,6 @@ Makefile*
 # QtCtreator CMake
 CMakeLists.txt.user
 
+
+# translation
+*.mo

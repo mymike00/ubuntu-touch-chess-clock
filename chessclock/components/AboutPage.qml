@@ -22,6 +22,7 @@ import Ubuntu.Components.Pickers 1.0
 import QtQuick.Window 2.2
 import Ubuntu.Layouts 0.1
 import Ubuntu.Components.ListItems 1.3 as ListItem
+import QtGraphicalEffects 1.0
 
 Page {
     id: aboutPage
@@ -49,13 +50,15 @@ Page {
                 id: _icon
                 height: aboutPage.height/2
                 width: aboutPage.height/2
-                UbuntuShape {
+                ProportionalShape {
+                   id: logoShape
                     Layouts.item: "icon"
                     anchors.fill: parent
                     anchors.topMargin: units.gu(2)
                     anchors.bottomMargin: units.gu(2)
                     anchors.leftMargin: units.gu(2)
                     anchors.rightMargin: units.gu(2)
+                    aspect: UbuntuShape.Flat
                     source: Image {
                         objectName: "aboutImage"
                         source: "chessclock.png"
@@ -66,16 +69,20 @@ Page {
             }
             ListItem.Divider { }
             ListItem.Subtitled {
-                text: i18n.tr("Author")
+                text: i18n.tr("Actual Mainainer")
+                subText: "Michele Castellazzi"
+            }
+            ListItem.Subtitled {
+                text: i18n.tr("Original Author")
                 subText: "Jonas Tjemsland"
             }
             ListItem.Subtitled {
-                text: i18n.tr("Contact")
-                subText: "jonas.tjemsland@gmail.com"
+                text: i18n.tr("Website")
+                subText: "https://github.com/mymike00/ubuntu-touch-chess-clock"
             }
             ListItem.Subtitled {
-                text: i18n.tr("Website")
-                subText: "https://github.com/tjemsland/ubuntu-touch-chess-clock"
+                text: i18n.tr("Report an issue")
+                subText: "https://github.com/mymike00/ubuntu-touch-chess-clock/issue"
             }
             ListItem.Subtitled {
                 text: i18n.tr("Version")
