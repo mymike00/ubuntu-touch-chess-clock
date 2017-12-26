@@ -86,7 +86,7 @@ Page {
             }
             ListItem.Subtitled {
                 text: i18n.tr("Version")
-                subText: "1.5"
+                subText: "1.5.1"
             }
             ListItem.Subtitled {
                 text: i18n.tr("Date")

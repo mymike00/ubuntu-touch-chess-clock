@@ -9,7 +9,7 @@
             "desktop": "chessclock/chessclock.desktop"
         }
     },
-    "version": "1.5",
-    "maintainer": "Jonas Tjemsland <jonas.tjemsland@gmail.com>",
+    "version": "1.5.1",
+    "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
     "framework": "ubuntu-sdk-15.04.5"
 }
