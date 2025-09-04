@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 23:18+0000\n"
+"POT-Creation-Date: 2025-08-19 17:45+0000\n"
 "PO-Revision-Date: 2017-01-04 18:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,101 +18,101 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:31
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:77
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:31
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:77
 msgid "About"
 msgstr "Om"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:72
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:72
 msgid "Actual Mainainer"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:76
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:76
 msgid "Original Author"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:80
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:80
 #, fuzzy
 msgid "Website"
 msgstr "Hjemmeside"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:84
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:84
 msgid "Report an issue"
 msgstr ""
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:88
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:88
 #, fuzzy
 msgid "Version"
 msgstr "Versjon"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:92
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:92
 #, fuzzy
 msgid "Date"
 msgstr "Dato"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:93
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/AboutPage.qml:93
 msgid "January 9, 2017"
 msgstr "9. januar 2017"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:30
 msgid "Help"
 msgstr "Hjelp"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:47
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:47
 msgid "Pause/reset button"
 msgstr "Pause- og resetknapp"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
 #, fuzzy
 msgid "Press: pause clocks"
 msgstr "Trykk: sett klokkene på pause"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:49
 msgid "Hold: reset clocks to last setting"
 msgstr "Hold: reset til forrige instillinger"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:53
 msgid "About time controls"
 msgstr "Om tidskontroller"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:54
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:79
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:100
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:54
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:79
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:100
 msgid "Sudden Death"
 msgstr "Sikker død"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:55
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:118
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:101
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:55
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:118
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:101
 msgid "Count Up"
 msgstr "Tell opp"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:56
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:105
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:102
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:56
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:105
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:102
 msgid "Fischer"
 msgstr "Fischer"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:57
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:92
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:103
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:57
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:92
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:103
 msgid "Hour Glass"
 msgstr "Timeglass"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:58
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:131
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:58
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:131
 msgid "Bronstein"
 msgstr "Bronstein"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:60
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:60
 msgid "https://en.wikipedia.org/wiki/Chess_clock"
 msgstr "https://no.wikipedia.org/wiki/Sjakkur"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:63
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:63
 msgid "More on chess clocks..."
 msgstr "Mer om sjakkur..."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:80
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:80
 msgid ""
 "This is the simplest methodology. Each player is assigned a fixed amount of "
 "time for the whole game: once a player's main time expires, he loses the "
@@ -121,11 +121,11 @@ msgstr ""
 "Dette er den enkleste metodikken. Hver spiller får en gitt mengde tid for "
 "hele spillet: når en spiller går tom for tid, taper han."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:82
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:82
 msgid "That was simple!"
 msgstr "Det var enkelt!"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:93
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:93
 msgid ""
 "A player loses in this time control when they allow the difference between "
 "both clocks to reach the specified total amount. For example, if the total "
@@ -146,11 +146,11 @@ msgstr ""
 "bruker 29 sekunder og så trykker på klokka, har han et sekund igjen på "
 "klokka og motspilleren har femti-ni sekunder."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:95
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:95
 msgid "Ok, got it!"
 msgstr "Ok, skjønner!"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:106
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:106
 msgid ""
 "Before a player has made their move, a specified time increment is added to "
 "their clock. Time can be accumulated, so if the player moves within the "
@@ -168,21 +168,21 @@ msgstr ""
 "sekunder på det neste trekket, har han tolv sekunder i starten av neste "
 "trekk."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:108
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:108
 msgid "I understand!"
 msgstr "Jeg forstår!"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:119
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:119
 #, fuzzy
 msgid ""
 "In this time control the total time used by each of the players is recorded."
 msgstr "I denne tidskontrollen måles den totale tiden hver spiller bruker."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:121
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:121
 msgid "Is that all?"
 msgstr "Er det alt?"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:132
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:132
 msgid ""
 "With the Bronstein timing method, the increment is always added after the "
 "move. But unlike Fischer, not always the maximum increment is added. If a "
@@ -207,56 +207,56 @@ msgstr ""
 "trykket på klokka øke med tre sekunder (og ikke fem). Dette sørger forat "
 "tiden igjen på klokka aldri kan øke, selv om spillerne trekker fort."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:134
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/InfoPage.qml:134
 msgid "Acknowledged."
 msgstr "Mottat."
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:37
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:37
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:52
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:52
 msgid "Information"
 msgstr "Informasjon"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:61
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:61
 msgid "Pause"
 msgstr "Stans"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:66
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:66
 msgid "Sounds"
 msgstr "Lyder"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:71
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:71
 msgid "Reset"
 msgstr "Omstart"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:93
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:93
 msgid "Mode"
 msgstr "Modus"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:104
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:104
 #, fuzzy
 msgid "Bronstein Delay"
 msgstr "Bronstein-modus"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:128
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:128
 msgid "Player 1"
 msgstr "Spiller 1"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:150
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:150
 msgid "Player 2"
 msgstr "Spiller 2"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:175
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:175
 msgid "Set clock"
 msgstr "Bruk instillinger"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:199
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/chessclock/components/SettingsPage.qml:199
 msgid "Delay"
 msgstr "Forsinkelse"
 
-#: /home/mike/Documenti/UTapps/ubuntu-touch-chess-clock/build/chessclock/chessclock.desktop.h:1
+#: /home/alaskalinuxuser/Documents/projects/clicks/ubuntu-touch-chess-clock/build/all/app/chessclock/chessclock.desktop.h:1
 msgid "chessclock"
 msgstr "sjakkur"
 

@@ -1,7 +1,7 @@
 {
     "name": "chessclock.jonas",
     "description": "Simple chess clock for Ubuntu Touch",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "Chess Clock",
     "hooks": {
         "chessclock": {
@@ -9,7 +9,7 @@
             "desktop": "chessclock/chessclock.desktop"
         }
     },
-    "version": "1.5.1",
+    "version": "1.5.2",
     "maintainer": "Michele Castellazzi <miguel2000@livecom.it>",
-    "framework": "ubuntu-sdk-15.04.5"
+    "framework": "@CLICK_FRAMEWORK@"
 }

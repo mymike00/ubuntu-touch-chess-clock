@@ -1,4 +1,5 @@
 {
-  "template": "pure-qml-qmake",
-  "default": "kill clean build click_build install launch logs"
+  "clickable_minimum_required": "8.4",
+  "builder": "pure-qml-qmake",
+  "kill": "qmlscene"
 }
